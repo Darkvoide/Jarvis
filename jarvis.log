@@ -1,0 +1,68 @@
+2026-08-14 12:16:31,775 [INFO] __main__: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-14 12:16:31,788 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, search_web, speak
+2026-08-14 12:16:49,086 [INFO] jarvis.inputs.voice_input: VoiceListener started. Hold 'F9' to speak.
+2026-08-14 12:16:49,095 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-14 12:16:49,110 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-14 12:16:54,108 [INFO] jarvis.inputs.voice_input: PTT key: f9
+2026-08-14 12:16:56,119 [INFO] jarvis.inputs.gesture_input: Downloading MediaPipe gesture model (~25 MB)…
+2026-08-14 12:17:10,031 [INFO] jarvis.inputs.gesture_input: Model saved to D:\Jarvis\.mediapipe_models\gesture_recognizer.task
+2026-08-14 12:17:23,565 [INFO] jarvis.inputs.gesture_input: Gesture watcher camera open at index 0.
+2026-08-14 12:18:24,331 [INFO] jarvis.inputs.gesture_input: Gesture: Victory (0.89) → intent: detect_object from the current camera view
+2026-08-14 12:18:26,368 [ERROR] jarvis.orchestrator: Ollama error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-08-14 12:18:26,369 [INFO] jarvis.tools.speech_tools: speak: I ran into a problem reaching the LLM: Failed to connect to Ollama. Please check
+2026-08-14 12:18:26,575 [INFO] comtypes.client._code_cache: Could not import comtypes.gen, trying to create it.
+2026-08-14 12:18:26,576 [INFO] comtypes.client._code_cache: Created comtypes.gen directory: 'D:\Jarvis\.venv\Lib\site-packages\comtypes\gen'
+2026-08-14 12:18:26,577 [INFO] comtypes.client._code_cache: Writing __init__.py file: 'D:\Jarvis\.venv\Lib\site-packages\comtypes\gen\__init__.py'
+2026-08-14 12:18:26,584 [INFO] comtypes.client._code_cache: Using writeable comtypes cache directory: 'D:\Jarvis\.venv\Lib\site-packages\comtypes\gen'
+2026-08-14 12:18:26,617 [INFO] comtypes.client._generate: Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: No module named 'comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4'
+2026-08-14 12:18:26,624 [INFO] comtypes.client._generate: # Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+2026-08-14 12:18:26,691 [INFO] comtypes.client._generate: # Generating comtypes.gen.SpeechLib
+2026-08-14 12:18:26,698 [INFO] comtypes.client._generate: Could not import comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0: No module named 'comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0'
+2026-08-14 12:18:26,700 [INFO] comtypes.client._generate: # Generating comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0
+2026-08-14 12:18:26,707 [INFO] comtypes.client._generate: # Generating comtypes.gen.stdole
+2026-08-14 12:18:54,804 [INFO] jarvis.inputs.gesture_input: Gesture: Closed_Fist (0.93) → intent: delete the selected object
+2026-08-14 12:18:56,840 [ERROR] jarvis.orchestrator: Ollama error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-08-14 12:18:56,841 [INFO] jarvis.tools.speech_tools: speak: I ran into a problem reaching the LLM: Failed to connect to Ollama. Please check
+2026-08-14 12:19:21,801 [INFO] jarvis.inputs.gesture_input: Gesture: Pointing_Up (0.84) → intent: select the most prominent object in the scene
+2026-08-14 12:19:23,841 [ERROR] jarvis.orchestrator: Ollama error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-08-14 12:19:23,842 [INFO] jarvis.tools.speech_tools: speak: I ran into a problem reaching the LLM: Failed to connect to Ollama. Please check
+2026-08-14 12:19:32,528 [INFO] jarvis.inputs.gesture_input: Gesture: Closed_Fist (0.83) → intent: delete the selected object
+2026-08-14 12:19:34,582 [ERROR] jarvis.orchestrator: Ollama error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-08-14 12:19:34,583 [INFO] jarvis.tools.speech_tools: speak: I ran into a problem reaching the LLM: Failed to connect to Ollama. Please check
+2026-08-14 12:19:59,022 [INFO] jarvis.inputs.gesture_input: Gesture: Open_Palm (0.78) → intent: cancel the current action
+2026-08-14 12:20:01,079 [ERROR] jarvis.orchestrator: Ollama error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-08-14 12:20:01,080 [INFO] jarvis.tools.speech_tools: speak: I ran into a problem reaching the LLM: Failed to connect to Ollama. Please check
+2026-08-14 12:20:28,549 [INFO] jarvis.inputs.gesture_input: Gesture: Thumb_Up (0.75) → intent: confirm the last proposed action
+2026-08-14 12:20:30,592 [ERROR] jarvis.orchestrator: Ollama error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-08-14 12:20:30,592 [INFO] jarvis.tools.speech_tools: speak: I ran into a problem reaching the LLM: Failed to connect to Ollama. Please check
+2026-08-14 12:20:40,995 [INFO] jarvis.inputs.gesture_input: Gesture: Open_Palm (0.79) → intent: cancel the current action
+2026-08-14 12:20:43,042 [ERROR] jarvis.orchestrator: Ollama error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-08-14 12:20:43,043 [INFO] jarvis.tools.speech_tools: speak: I ran into a problem reaching the LLM: Failed to connect to Ollama. Please check
+2026-08-14 12:21:23,563 [INFO] __main__: JARVIS shutdown complete.
+2026-08-14 12:38:52,573 [INFO] main: JARVIS starting — mode=text, model=qwen2.5:7b
+2026-08-14 12:38:52,575 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, search_web, speak
+2026-08-14 12:38:52,586 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-14 12:40:29,160 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-14 12:40:29,161 [INFO] jarvis.tools.speech_tools: speak: வணக்கம்! எப்போது நான் மீண்டும் உங்கள் உதவி வேண்டும்?
+2026-08-14 12:40:29,222 [INFO] comtypes.client._code_cache: Imported existing <module 'comtypes.gen' from 'D:\\Jarvis\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-08-14 12:40:29,223 [INFO] comtypes.client._code_cache: Using writeable comtypes cache directory: 'D:\Jarvis\.venv\Lib\site-packages\comtypes\gen'
+2026-08-14 12:40:31,322 [INFO] main: JARVIS shutdown complete.
+2026-08-14 12:48:00,467 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-14 12:48:00,468 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, search_web, speak
+2026-08-14 12:48:00,585 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-14 12:48:00,589 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-14 12:48:16,022 [INFO] jarvis.inputs.gesture_input: Gesture watcher camera open at index 0.
+2026-08-14 12:49:24,104 [INFO] jarvis.inputs.gesture_input: Gesture: Thumb_Up (0.76) → intent: confirm the last proposed action
+2026-08-14 12:49:43,228 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-14 12:49:43,230 [INFO] jarvis.tools.speech_tools: speak: Could you please clarify which action you'd like to confirm? If you're referring
+2026-08-14 12:50:24,923 [INFO] jarvis.inputs.gesture_input: Gesture: Thumb_Up (0.77) → intent: confirm the last proposed action
+2026-08-14 12:50:31,021 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-14 12:50:31,022 [INFO] jarvis.tools.speech_tools: speak: The last proposed action was to analyze the object labeled "pen". Have I confirm
+2026-08-14 12:50:47,169 [INFO] jarvis.inputs.gesture_input: Gesture: Thumb_Up (0.77) → intent: confirm the last proposed action
+2026-08-14 12:50:52,694 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-14 12:50:52,695 [INFO] jarvis.tools.speech_tools: speak: The last proposed action was to analyze the object labeled "pen". Is this the ac
+2026-08-14 12:51:04,742 [INFO] jarvis.inputs.gesture_input: Gesture: Open_Palm (0.75) → intent: cancel the current action
+2026-08-14 12:51:11,833 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-14 12:51:11,834 [INFO] jarvis.tools.speech_tools: speak: The current action has been canceled. If you had any specific object selected fo
+2026-08-14 12:51:57,990 [INFO] main: JARVIS shutdown complete.
+2026-08-14 12:51:58,005 [ERROR] jarvis.inputs.voice_input: Continuous voice input error: Stream is stopped [PaErrorCode -9983]

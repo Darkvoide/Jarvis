@@ -1,0 +1,36 @@
+# ─── LLM ───────────────────────────────────────────────────────────────────────
+ollama>=0.4.0
+
+# ─── Speech-to-Text ────────────────────────────────────────────────────────────
+faster-whisper>=1.0.0
+sounddevice>=0.4.6
+numpy>=1.26.0
+scipy>=1.13.0          # for WAV writing from sounddevice buffer
+
+# ─── Text-to-Speech ────────────────────────────────────────────────────────────
+pyttsx3>=2.90
+# Optional: better TTS (comment in if you want edge-tts)
+# edge-tts>=7.0.0
+
+# ─── Vision / Gesture ──────────────────────────────────────────────────────────
+opencv-python>=4.9.0
+mediapipe>=0.10.14
+
+# ─── Web Search ────────────────────────────────────────────────────────────────
+ddgs>=9.0.0                # formerly duckduckgo-search, no API key needed
+
+# ─── Configuration ─────────────────────────────────────────────────────────────
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+PyYAML>=6.0.1
+
+# ─── Hotkey listener ───────────────────────────────────────────────────────────
+keyboard>=0.13.5
+
+# ─── Utilities ─────────────────────────────────────────────────────────────────
+colorlog>=6.8.0        # coloured console logging
+python-dotenv>=1.0.0   # optional .env support
+
+# ─── Dev / Testing ─────────────────────────────────────────────────────────────
+pytest>=8.2.0
+pytest-asyncio>=0.23.0

@@ -1,0 +1,60 @@
+# ─────────────────────────────────────────────
+#  JARVIS Configuration
+# ─────────────────────────────────────────────
+
+ollama:
+  host: "http://localhost:11434"
+  # Main reasoning / tool-calling model
+  # Recommended: qwen2.5:7b  |  llama3.2:3b  |  mistral:7b
+  model: "qwen2.5:7b"
+  # Vision model (must support images). Set to null to stub vision tools.
+  # Pull first: ollama pull llava  OR  ollama pull minicpm-v
+  vision_model: null   # e.g. "llava:7b"
+  timeout: 120
+
+stt:
+  # "continuous" (hands-free auto-detect) or "ptt" (hold key to speak)
+  mode: "continuous"
+  # faster-whisper model size:
+  #   tiny | base | small | medium | large-v3 | large-v3-turbo
+  model_size: "base"
+  device: "cpu"          # "cpu" or "cuda"
+  compute_type: "int8"   # "int8" | "float16" | "float32"
+  language: null         # null = auto-detect (handles Tamil/English/Tanglish)
+  vad_filter: true
+
+tts:
+  # "edge-tts" – Microsoft Edge Neural TTS (Natural Tamil & English voices)
+  # "pyttsx3"  – fully offline fallback
+  backend: "edge-tts"
+  rate: 175          # words per minute (pyttsx3 only)
+  volume: 1.0        # 0.0 – 1.0 (pyttsx3 only)
+  # edge-tts voice for English (Tamil uses ta-IN-PallaviNeural automatically)
+  edge_voice: "en-US-ChristopherNeural"
+
+input:
+  # Push-to-talk hotkey. Options: F9, F10, ctrl+space, etc.
+  ptt_key: "F9"
+  # Camera index for vision/gesture (0 = default webcam)
+  camera_index: 0
+  # Enable gesture watcher on startup
+  gesture_enabled: true
+  # Gesture debounce in seconds (avoid repeated triggers)
+  gesture_debounce: 1.5
+
+permissions:
+  # Allow execute_command tool
+  allow_shell: true
+  # Allow read_file tool
+  allow_file_read: true
+  # Paths the file tool may access (empty list = unrestricted within user home)
+  allowed_paths: []
+  # Commands blocked from execute_command (regex patterns)
+  blocked_commands:
+    - "rm -rf"
+    - "format"
+    - "del /f"
+
+logging:
+  level: "INFO"    # DEBUG | INFO | WARNING | ERROR
+  file: "jarvis.log"
