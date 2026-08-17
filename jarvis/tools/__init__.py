@@ -13,7 +13,15 @@ from jarvis.tools.manipulation_tools import (
     rotate_object,
 )
 from jarvis.tools.speech_tools import speak
-from jarvis.tools.system_tools import execute_command, open_application, read_file
+from jarvis.tools.system_tools import (
+    control_media,
+    control_volume,
+    execute_command,
+    open_application,
+    read_file,
+    show_desktop,
+    take_screenshot,
+)
 from jarvis.tools.vision_tools import analyze_object, detect_object, select_object, zoom_object
 from jarvis.tools.web_tools import search_web
 
@@ -28,10 +36,14 @@ ALL_TOOLS: list = [
     rotate_object,
     duplicate_object,
     delete_object,
-    # System
+    # System / Desktop
     open_application,
     execute_command,
     read_file,
+    take_screenshot,
+    control_volume,
+    control_media,
+    show_desktop,
     # Web
     search_web,
     # Speech

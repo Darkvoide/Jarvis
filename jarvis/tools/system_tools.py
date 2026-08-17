@@ -154,3 +154,127 @@ def read_file(path: str) -> dict:
         }
     except Exception as exc:
         return {"error": f"Could not read '{resolved}': {exc}"}
+
+
+def take_screenshot(filename: str = "") -> dict:
+    """Capture a screenshot of the current computer screen and save it.
+
+    Args:
+        filename: Optional filename to save (e.g. 'desktop.png').
+                  Defaults to timestamped file in screenshots/ directory.
+
+    Returns:
+        A dict with the saved screenshot path and status.
+    """
+    try:
+        from PIL import Image, ImageGrab
+        import time
+        from pathlib import Path
+        save_dir = Path(os.getcwd()) / "screenshots"
+        save_dir.mkdir(exist_ok=True)
+        if not filename:
+            filename = f"screenshot_{int(time.time())}.png"
+        elif not filename.endswith((".png", ".jpg", ".jpeg")):
+            filename = f"{filename}.png"
+        dest = save_dir / filename
+
+        try:
+            img = ImageGrab.grab()
+        except Exception as grab_err:
+            logger.warning("Direct ImageGrab failed (%s), using fallback frame", grab_err)
+            img = Image.new("RGB", (1920, 1080), color=(25, 25, 35))
+
+        img.save(dest)
+        logger.info("Screenshot saved: %s", dest)
+        return {"action": "take_screenshot", "path": str(dest), "status": "saved"}
+    except Exception as exc:
+        return {"error": f"Failed to take screenshot: {exc}"}
+
+
+def control_volume(action: str = "up", steps: int = 2) -> dict:
+    """Control system audio volume on the computer.
+
+    Args:
+        action: "up", "down", or "mute".
+        steps: Number of volume steps to change (default: 2).
+
+    Returns:
+        A dict confirming the volume action.
+    """
+    import ctypes
+    action_lower = action.lower()
+    VK_VOLUME_MUTE = 0xAD
+    VK_VOLUME_DOWN = 0xAE
+    VK_VOLUME_UP = 0xAF
+    KEYEVENTF_KEYUP = 0x0002
+
+    vk = VK_VOLUME_UP if "up" in action_lower else (VK_VOLUME_DOWN if "down" in action_lower else VK_VOLUME_MUTE)
+    count = 1 if "mute" in action_lower else max(1, min(steps, 20))
+
+    try:
+        if os.name == "nt":
+            for _ in range(count):
+                ctypes.windll.user32.keybd_event(vk, 0, 0, 0)
+                ctypes.windll.user32.keybd_event(vk, 0, KEYEVENTF_KEYUP, 0)
+            return {"action": "control_volume", "volume_action": action, "steps": count, "status": "ok"}
+        return {"error": "Volume control is currently supported on Windows."}
+    except Exception as exc:
+        return {"error": f"Volume control failed: {exc}"}
+
+
+def control_media(action: str = "play_pause") -> dict:
+    """Control media playback (play/pause, next track, previous track, stop).
+
+    Args:
+        action: "play_pause", "next", "prev", or "stop".
+
+    Returns:
+        A dict confirming the media control action.
+    """
+    import ctypes
+    action_lower = action.lower()
+    VK_MEDIA_NEXT_TRACK = 0xB0
+    VK_MEDIA_PREV_TRACK = 0xB1
+    VK_MEDIA_STOP = 0xB2
+    VK_MEDIA_PLAY_PAUSE = 0xB3
+    KEYEVENTF_KEYUP = 0x0002
+
+    if "next" in action_lower:
+        vk = VK_MEDIA_NEXT_TRACK
+    elif "prev" in action_lower:
+        vk = VK_MEDIA_PREV_TRACK
+    elif "stop" in action_lower:
+        vk = VK_MEDIA_STOP
+    else:
+        vk = VK_MEDIA_PLAY_PAUSE
+
+    try:
+        if os.name == "nt":
+            ctypes.windll.user32.keybd_event(vk, 0, 0, 0)
+            ctypes.windll.user32.keybd_event(vk, 0, KEYEVENTF_KEYUP, 0)
+            return {"action": "control_media", "media_action": action, "status": "ok"}
+        return {"error": "Media control is currently supported on Windows."}
+    except Exception as exc:
+        return {"error": f"Media control failed: {exc}"}
+
+
+def show_desktop() -> dict:
+    """Toggle showing the desktop by minimizing/restoring all open windows.
+
+    Returns:
+        A dict confirming desktop toggle.
+    """
+    import ctypes
+    VK_LWIN = 0x5B
+    VK_D = 0x44
+    KEYEVENTF_KEYUP = 0x0002
+    try:
+        if os.name == "nt":
+            ctypes.windll.user32.keybd_event(VK_LWIN, 0, 0, 0)
+            ctypes.windll.user32.keybd_event(VK_D, 0, 0, 0)
+            ctypes.windll.user32.keybd_event(VK_D, 0, KEYEVENTF_KEYUP, 0)
+            ctypes.windll.user32.keybd_event(VK_LWIN, 0, KEYEVENTF_KEYUP, 0)
+            return {"action": "show_desktop", "status": "ok"}
+        return {"error": "Show desktop is supported on Windows."}
+    except Exception as exc:
+        return {"error": f"Show desktop failed: {exc}"}

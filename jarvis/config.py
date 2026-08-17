@@ -25,11 +25,16 @@ class OllamaConfig(BaseModel):
 
 class STTConfig(BaseModel):
     mode: str = "continuous"  # "continuous" (hands-free) or "ptt" (push-to-talk)
-    model_size: str = "base"
+    model_size: str = "small"
     device: str = "cpu"
     compute_type: str = "int8"
     language: Optional[str] = None
     vad_filter: bool = True
+    # Accuracy tuning fields (wired into faster-whisper transcription)
+    initial_prompt: Optional[str] = None          # Vocabulary/context hint for Whisper
+    vad_min_silence_ms: int = 400                 # ms of silence before VAD clips audio
+    no_speech_threshold: float = 0.6              # Suppress pure noise/silence transcripts
+    min_language_prob: float = 0.0                # 0.0 = off; 0.4 = skip low-confidence lang
 
 
 class TTSConfig(BaseModel):
@@ -44,6 +49,9 @@ class InputConfig(BaseModel):
     camera_index: int = 0
     gesture_enabled: bool = True
     gesture_debounce: float = 1.5
+    direct_gestures: bool = True
+    gesture_mapping: dict[str, str] = Field(default_factory=dict)
+    gesture_min_confidence: float = 0.80          # Min confidence to accept a gesture
 
 
 class PermissionsConfig(BaseModel):

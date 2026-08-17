@@ -116,6 +116,7 @@ def run_all_mode(orch: Orchestrator, cfg) -> None:
     voice.start()
 
     # Gesture watcher (background) — only if enabled
+    gesture = None
     if cfg.input.gesture_enabled:
         from jarvis.inputs.gesture_input import GestureWatcher
         gesture = GestureWatcher(on_intent=handle)
@@ -127,11 +128,14 @@ def run_all_mode(orch: Orchestrator, cfg) -> None:
     print(f"    ⌨️   Or type below and press Enter.")
     print(f"    Type 'exit' to quit.\n")
 
-    # Text input on main thread
+    # Text input on main thread (blocks until user types 'exit' or Ctrl+C)
     text = TextListener(on_text=handle)
     text.run()
 
+    # Clean shutdown in correct order
     voice.stop()
+    if gesture is not None:
+        gesture.stop()
 
 
 # ── Entry ──────────────────────────────────────────────────────────────────────

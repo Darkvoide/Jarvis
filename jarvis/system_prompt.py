@@ -56,6 +56,7 @@ def build_system_prompt(tool_names: list[str] | None = None) -> str:
         tool_list = (
             "detect_object, select_object, zoom_object, move_object, "
             "rotate_object, duplicate_object, delete_object, analyze_object, "
-            "search_web, open_application, read_file, execute_command, speak"
+            "search_web, open_application, read_file, execute_command, "
+            "take_screenshot, control_volume, control_media, show_desktop, speak"
         )
     return SYSTEM_PROMPT.format(tool_list=tool_list)

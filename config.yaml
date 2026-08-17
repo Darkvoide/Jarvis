@@ -15,13 +15,25 @@ ollama:
 stt:
   # "continuous" (hands-free auto-detect) or "ptt" (hold key to speak)
   mode: "continuous"
-  # faster-whisper model size:
-  #   tiny | base | small | medium | large-v3 | large-v3-turbo
-  model_size: "base"
+  # faster-whisper model size — ACCURACY RANKED:
+  #   tiny (fastest, least accurate) | base | small (best balance) | medium | large-v3 (most accurate)
+  # ↑ Upgrade to "small" for better Tamil+English accuracy on CPU. "base" if speed is priority.
+  model_size: "small"
   device: "cpu"          # "cpu" or "cuda"
-  compute_type: "int8"   # "int8" | "float16" | "float32"
-  language: null         # null = auto-detect (handles Tamil/English/Tanglish)
+  compute_type: "int8"   # "int8" (fastest cpu) | "float16" (needs cuda) | "float32"
+  # FIX: Pin language to "ta" for Tamil-dominant speech, or "en" for English-only
+  # "null" makes Whisper guess — causing hi/ta/en confusion (seen in logs)
+  # For Tanglish (Tamil+English mix), set language to null but use initial_prompt below
+  language: null
+  # initial_prompt nudges Whisper toward Tamil+English and your vocabulary:
+  initial_prompt: "JARVIS, screenshot, volume, browser, open, close, play, pause."
   vad_filter: true
+  # VAD aggressiveness — silenceMs before cutting off (was 250ms, too aggressive for short words)
+  vad_min_silence_ms: 400
+  # Minimum language detection probability before accepting transcript (0.0=off, 0.5=recommended)
+  min_language_prob: 0.40
+  # Reject transcripts that are just noise artifacts
+  no_speech_threshold: 0.6
 
 tts:
   # "edge-tts" – Microsoft Edge Neural TTS (Natural Tamil & English voices)
@@ -39,8 +51,12 @@ input:
   camera_index: 0
   # Enable gesture watcher on startup
   gesture_enabled: true
-  # Gesture debounce in seconds (avoid repeated triggers)
-  gesture_debounce: 1.5
+  # Gesture debounce in seconds — reduce false repeats (1.2s = recommended)
+  gesture_debounce: 1.2
+  # Directly execute Windows system actions without going through the LLM
+  direct_gestures: true
+  # Minimum gesture confidence to accept (0.0-1.0). Raise to reduce false positives.
+  gesture_min_confidence: 0.80
 
 permissions:
   # Allow execute_command tool
