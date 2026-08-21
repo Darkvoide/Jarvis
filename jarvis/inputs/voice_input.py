@@ -8,7 +8,9 @@ Modes:
 
 from __future__ import annotations
 
+from collections import deque
 import logging
+import sys
 import threading
 import time
 from typing import Callable, Optional
@@ -16,11 +18,21 @@ from typing import Callable, Optional
 import numpy as np
 
 from jarvis.config import get_config
+from jarvis.tools.speech_tools import is_tts_playing
+
+# Ensure Windows stdout/stderr handles Unicode characters cleanly
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 logger = logging.getLogger(__name__)
 
 SAMPLE_RATE = 16000   # Whisper expects 16 kHz mono
-CHUNK_SIZE = 1024     # Read chunks
+CHUNK_SIZE = 1024     # Read chunks (~64ms per chunk)
+PRE_ROLL_CHUNKS = 6   # ~384ms pre-speech audio buffer so first syllables are never cut off
 
 
 class VoiceListener:
@@ -96,14 +108,21 @@ class VoiceListener:
             self._run_continuous(sd)
 
     def _run_continuous(self, sd) -> None:
-        """Hands-free voice activity detection (VAD) with fast turnaround."""
-        ENERGY_THRESHOLD = 0.020   # RMS amplitude threshold for speech
-        SILENCE_DURATION = 0.45    # Seconds of silence after speech to trigger instant transcription (was 0.8s)
-        MAX_RECORD_SECONDS = 15.0  # Max recording turn duration
+        """Hands-free voice activity detection (VAD) with adaptive noise calibration."""
+        # Sensible thresholds for clear voice detection
+        DEFAULT_ENERGY_THRESHOLD = 0.012   # Lowered from 0.020 so normal speech is caught
+        SILENCE_DURATION = 0.65            # Seconds of silence after speech to complete utterance
+        MAX_RECORD_SECONDS = 15.0          # Max recording turn duration
 
         silence_start = None
         is_speaking = False
         recorded_chunks: list[np.ndarray] = []
+        pre_roll_buffer: deque[np.ndarray] = deque(maxlen=PRE_ROLL_CHUNKS)
+        _tts_ended_at: list[float] = [0.0]  # mutable container for post-TTS cooldown tracking
+
+        # Baseline noise calibration
+        noise_samples = []
+        calibrated_threshold = DEFAULT_ENERGY_THRESHOLD
 
         try:
             with sd.InputStream(
@@ -113,6 +132,21 @@ class VoiceListener:
                 blocksize=CHUNK_SIZE,
             ) as stream:
                 while not self._stop_event.is_set():
+                    # If JARVIS is currently speaking TTS output, mute mic listening to avoid echo loops
+                    if is_tts_playing():
+                        is_speaking = False
+                        silence_start = None
+                        recorded_chunks.clear()
+                        pre_roll_buffer.clear()
+                        time.sleep(0.05)
+                        _tts_ended_at[0] = time.time()  # mark when TTS last finished
+                        continue
+
+                    # After TTS ends, hold a short cooldown so room echo doesn't trigger the mic
+                    if time.time() - _tts_ended_at[0] < 0.9:
+                        time.sleep(0.02)
+                        continue
+
                     data, overflow = stream.read(CHUNK_SIZE)
                     if overflow:
                         continue
@@ -120,11 +154,25 @@ class VoiceListener:
                     chunk = data.flatten()
                     rms = float(np.sqrt(np.mean(chunk**2)))
 
-                    if rms > ENERGY_THRESHOLD:
+                    # Ambient noise calibration for first ~1 second
+                    if len(noise_samples) < 15:
+                        noise_samples.append(rms)
+                        if len(noise_samples) == 15:
+                            avg_noise = float(np.mean(noise_samples))
+                            calibrated_threshold = max(DEFAULT_ENERGY_THRESHOLD, avg_noise * 2.2)
+                            logger.info(
+                                "Microphone calibrated: noise_floor=%.4f, speech_threshold=%.4f",
+                                avg_noise, calibrated_threshold,
+                            )
+                        continue
+
+                    if rms > calibrated_threshold:
                         if not is_speaking:
                             is_speaking = True
                             print("🎙️  [Listening...]")
                             recorded_chunks.clear()
+                            # Prepend pre-roll buffer so the start of words is never cut off
+                            recorded_chunks.extend(list(pre_roll_buffer))
                         recorded_chunks.append(chunk)
                         silence_start = None
                     elif is_speaking:
@@ -137,12 +185,14 @@ class VoiceListener:
                             silence_start = None
                             audio = np.concatenate(recorded_chunks, axis=0)
                             recorded_chunks.clear()
-                            if len(audio) >= SAMPLE_RATE * 0.3:  # At least 300ms
+                            if len(audio) >= SAMPLE_RATE * 0.35:  # At least 350ms
                                 threading.Thread(
                                     target=self._transcribe_and_emit,
                                     args=(audio,),
                                     daemon=True,
                                 ).start()
+                    else:
+                        pre_roll_buffer.append(chunk)
 
                     # Guard against runaway recording
                     if is_speaking and len(recorded_chunks) * CHUNK_SIZE > SAMPLE_RATE * MAX_RECORD_SECONDS:
@@ -175,7 +225,7 @@ class VoiceListener:
         ptt_key = self._cfg.input.ptt_key.lower()
 
         def _audio_callback(indata, frames, time_info, status):
-            if self._recording:
+            if self._recording and not is_tts_playing():
                 self._frames.append(indata.copy())
 
         try:
@@ -217,11 +267,11 @@ class VoiceListener:
             vad_params = None
             if stt.vad_filter:
                 vad_params = dict(
-                    min_silence_duration_ms=getattr(stt, "vad_min_silence_ms", 400),
+                    min_silence_duration_ms=getattr(stt, "vad_min_silence_ms", 300),
                     threshold=0.3,
                 )
 
-            # Transcribe — beam_size=1 for speed, or 5 for max accuracy
+            # Transcribe — beam_size=1 for fast turnaround
             segments, info = model.transcribe(
                 audio,
                 beam_size=1,
@@ -235,18 +285,29 @@ class VoiceListener:
                 no_speech_threshold=getattr(stt, "no_speech_threshold", 0.6),
             )
 
-            # Filter: reject low language-confidence outputs (noisy room, TV in background)
+            text = " ".join(seg.text.strip() for seg in segments).strip()
+
+            # Clean and filter out hallucinated artifacts or empty noise
+            if not text:
+                return
+
+            # Remove noise hallucinations (e.g. repeated dots or single characters)
+            cleaned = text.replace(".", "").replace(",", "").replace("-", "").strip()
+            if len(cleaned) < 2:
+                return
+
+            # Reject low language-confidence transcripts (background TV/room noise produces
+            # low-confidence language detections like [tr 46%] or [id 42%])
             min_prob = getattr(stt, "min_language_prob", 0.0)
             if min_prob > 0.0 and info.language_probability < min_prob:
                 logger.debug(
-                    "Skipping transcript — language prob %.2f < %.2f threshold (lang=%s)",
-                    info.language_probability, min_prob, info.language,
+                    "Skipping low-confidence transcript [%s %.0f%%]: %s",
+                    info.language, info.language_probability * 100, text,
                 )
                 return
 
-            text = " ".join(seg.text.strip() for seg in segments).strip()
-            if text:
-                logger.info("Transcribed [%s %.0f%%]: %s", info.language, info.language_probability * 100, text)
-                self.on_transcript(text)
+            logger.info("Transcribed [%s %.0f%%]: %s", info.language, info.language_probability * 100, text)
+            self.on_transcript(text)
         except Exception as exc:
             logger.error("Transcription error: %s", exc)
+

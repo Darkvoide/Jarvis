@@ -725,3 +725,1687 @@ An error happened while trying to locate the files on the Hub, and we cannot fin
 2026-08-17 16:47:08,468 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
 2026-08-17 16:47:08,472 [INFO] jarvis.tools.speech_tools: speak: You're welcome! Let me know if you need any assistance.
 2026-08-17 16:47:08,493 [WARNING] jarvis.tools.speech_tools: edge-tts failed (cannot schedule new futures after interpreter shutdown), falling back to pyttsx3
+2026-08-21 09:33:04,123 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-21 09:33:04,124 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, take_screenshot, control_volume, control_media, show_desktop, search_web, speak
+2026-08-21 09:33:04,604 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-21 09:33:04,609 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-21 09:33:06,677 [INFO] jarvis.inputs.voice_input: Loading speech recognition model (small, cpu)...
+2026-08-21 09:33:08,134 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+2026-08-21 09:33:08,464 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-08-21 09:33:09,907 [INFO] jarvis.inputs.voice_input: Speech recognition model ready.
+2026-08-21 09:33:09,908 [INFO] faster_whisper: Processing audio with duration 00:00.768
+2026-08-21 09:33:10,104 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 09:33:11,939 [INFO] faster_whisper: Detected language 'en' with probability 0.89
+2026-08-21 09:33:13,831 [INFO] jarvis.inputs.voice_input: Transcribed [en 89%]: JARVIS.
+2026-08-21 09:33:14,012 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 09:33:14,016 [INFO] faster_whisper: VAD filter removed 00:00.304 of audio
+2026-08-21 09:33:15,705 [INFO] faster_whisper: Detected language 'en' with probability 0.49
+2026-08-21 09:33:17,657 [INFO] jarvis.inputs.voice_input: Transcribed [en 49%]: JARVIS.
+2026-08-21 09:33:20,203 [INFO] jarvis.inputs.gesture_input: Gesture watcher camera open at index 0.
+2026-08-21 09:33:27,712 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 09:33:27,717 [INFO] faster_whisper: VAD filter removed 00:00.176 of audio
+2026-08-21 09:33:30,765 [INFO] faster_whisper: Detected language 'en' with probability 0.59
+2026-08-21 09:33:31,023 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 09:33:31,028 [INFO] jarvis.tools.speech_tools: speak: Hello! How can I assist you today?
+2026-08-21 09:33:31,682 [INFO] faster_whisper: Processing audio with duration 00:00.704
+2026-08-21 09:33:31,687 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 09:33:34,363 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 09:33:34,369 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 09:33:34,660 [INFO] jarvis.inputs.voice_input: Transcribed [en 59%]: Let's get it.
+2026-08-21 09:33:34,875 [INFO] faster_whisper: Detected language 'en' with probability 0.61
+2026-08-21 09:33:35,202 [INFO] faster_whisper: Processing audio with duration 00:00.640
+2026-08-21 09:33:35,206 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 09:33:37,399 [INFO] main: JARVIS shutdown complete.
+2026-08-21 09:33:37,834 [INFO] jarvis.inputs.gesture_input: GestureWatcher stopped.
+2026-08-21 12:55:50,598 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-21 12:55:50,599 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, take_screenshot, control_volume, control_media, show_desktop, search_web, speak
+2026-08-21 12:55:50,746 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-21 12:55:50,749 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-21 12:55:51,156 [INFO] jarvis.inputs.voice_input: Loading speech recognition model (small, cpu)...
+2026-08-21 12:55:51,877 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-08-21 12:55:52,606 [INFO] jarvis.inputs.voice_input: Microphone calibrated: noise_floor=0.0030, speech_threshold=0.0120
+2026-08-21 12:55:53,227 [INFO] jarvis.inputs.voice_input: Speech recognition model ready.
+2026-08-21 12:55:55,547 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 12:55:55,727 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 12:55:57,764 [INFO] faster_whisper: Detected language 'tr' with probability 0.46
+2026-08-21 12:55:58,747 [INFO] faster_whisper: Processing audio with duration 00:03.456
+2026-08-21 12:55:58,756 [INFO] faster_whisper: VAD filter removed 00:00.816 of audio
+2026-08-21 12:56:01,047 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 12:56:01,053 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 12:56:01,163 [INFO] jarvis.inputs.voice_input: Transcribed [tr 46%]: Derse.
+2026-08-21 12:56:01,358 [INFO] faster_whisper: Detected language 'id' with probability 0.42
+2026-08-21 12:56:02,267 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 12:56:02,272 [INFO] faster_whisper: VAD filter removed 00:00.048 of audio
+2026-08-21 12:56:03,676 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 12:56:03,682 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 12:56:05,095 [INFO] main: JARVIS shutdown complete.
+2026-08-21 12:56:28,035 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-21 12:56:28,036 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, take_screenshot, control_volume, control_media, show_desktop, search_web, speak
+2026-08-21 12:56:28,131 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-21 12:56:28,141 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-21 12:56:28,308 [INFO] jarvis.inputs.voice_input: Loading speech recognition model (small, cpu)...
+2026-08-21 12:56:28,748 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-08-21 12:56:29,756 [INFO] jarvis.inputs.voice_input: Microphone calibrated: noise_floor=0.0157, speech_threshold=0.0346
+2026-08-21 12:56:30,090 [INFO] jarvis.inputs.voice_input: Speech recognition model ready.
+2026-08-21 12:56:35,197 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 12:56:35,273 [INFO] faster_whisper: VAD filter removed 00:00.112 of audio
+2026-08-21 12:56:37,091 [INFO] faster_whisper: Detected language 'hi' with probability 0.51
+2026-08-21 12:56:39,310 [INFO] jarvis.inputs.voice_input: Transcribed [hi 51%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 12:56:39,357 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 12:56:39,361 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 12:56:41,204 [INFO] faster_whisper: Detected language 'ja' with probability 0.32
+2026-08-21 12:56:41,313 [INFO] jarvis.inputs.gesture_input: Gesture watcher camera open at index 0.
+2026-08-21 12:56:41,717 [INFO] faster_whisper: Processing audio with duration 00:01.536
+2026-08-21 12:56:41,722 [INFO] faster_whisper: VAD filter removed 00:00.176 of audio
+2026-08-21 12:56:47,526 [INFO] jarvis.inputs.voice_input: Transcribed [ja 32%]: じゃぁのー!
+2026-08-21 12:56:48,071 [INFO] faster_whisper: Detected language 'hi' with probability 0.38
+2026-08-21 12:56:49,482 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 12:56:49,493 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 12:56:55,140 [INFO] jarvis.inputs.voice_input: Transcribed [hi 38%]: तेजान।
+2026-08-21 12:56:55,526 [INFO] faster_whisper: Detected language 'id' with probability 0.48
+2026-08-21 12:56:56,572 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 12:56:56,582 [INFO] faster_whisper: VAD filter removed 00:00.144 of audio
+2026-08-21 12:56:56,807 [INFO] main: JARVIS shutdown complete.
+2026-08-21 12:57:52,864 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-21 12:57:52,865 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, take_screenshot, control_volume, control_media, show_desktop, search_web, speak
+2026-08-21 12:57:52,931 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-21 12:57:52,936 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-21 12:57:53,107 [INFO] jarvis.inputs.voice_input: Loading speech recognition model (small, cpu)...
+2026-08-21 12:57:54,545 [INFO] jarvis.inputs.voice_input: Microphone calibrated: noise_floor=0.0042, speech_threshold=0.0120
+2026-08-21 12:58:06,157 [INFO] jarvis.inputs.gesture_input: Gesture watcher camera open at index 0.
+2026-08-21 12:58:06,679 [INFO] jarvis.inputs.voice_input: Speech recognition model ready.
+2026-08-21 12:58:06,680 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 12:58:06,680 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 12:58:06,680 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 12:58:06,681 [INFO] faster_whisper: Processing audio with duration 00:01.856
+2026-08-21 12:58:06,762 [INFO] faster_whisper: VAD filter removed 00:01.280 of audio
+2026-08-21 12:58:06,767 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 12:58:06,768 [INFO] faster_whisper: VAD filter removed 00:00.112 of audio
+2026-08-21 12:58:06,769 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 12:58:13,178 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 12:58:13,398 [INFO] faster_whisper: Detected language 'en' with probability 0.32
+2026-08-21 12:58:13,547 [INFO] faster_whisper: Processing audio with duration 00:01.856
+2026-08-21 12:58:13,553 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 12:58:13,629 [INFO] faster_whisper: Detected language 'en' with probability 0.43
+2026-08-21 12:58:13,829 [INFO] faster_whisper: Detected language 'en' with probability 0.67
+2026-08-21 12:58:20,385 [INFO] jarvis.inputs.voice_input: Transcribed [en 32%]: Learning that.
+2026-08-21 12:58:20,606 [INFO] faster_whisper: Detected language 'en' with probability 0.47
+2026-08-21 12:58:21,193 [INFO] jarvis.inputs.voice_input: Transcribed [en 43%]: JARVIS cake, that.
+2026-08-21 12:58:21,696 [INFO] jarvis.inputs.voice_input: Transcribed [en 67%]: Hey, JARVIS.
+2026-08-21 12:58:24,800 [INFO] jarvis.inputs.voice_input: Transcribed [en 47%]: JARVIS, screenshot.
+2026-08-21 12:58:27,706 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 12:58:27,707 [INFO] jarvis.tools.speech_tools: speak: I'm here to help you with any questions or tasks you need. What would you like t
+2026-08-21 12:58:35,413 [INFO] main: JARVIS shutdown complete.
+2026-08-21 12:58:35,733 [INFO] jarvis.inputs.gesture_input: GestureWatcher stopped.
+2026-08-21 13:07:21,905 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-21 13:07:21,906 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, take_screenshot, control_volume, control_media, show_desktop, search_web, speak
+2026-08-21 13:07:22,034 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-21 13:07:22,036 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-21 13:07:22,424 [INFO] jarvis.inputs.voice_input: Loading speech recognition model (small, cpu)...
+2026-08-21 13:07:23,198 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-08-21 13:07:23,727 [INFO] jarvis.inputs.voice_input: Microphone calibrated: noise_floor=0.0119, speech_threshold=0.0262
+2026-08-21 13:07:24,868 [INFO] jarvis.inputs.voice_input: Speech recognition model ready.
+2026-08-21 13:07:25,578 [INFO] faster_whisper: Processing audio with duration 00:01.856
+2026-08-21 13:07:25,750 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:07:27,657 [INFO] faster_whisper: Detected language 'en' with probability 0.42
+2026-08-21 13:07:29,659 [INFO] jarvis.inputs.voice_input: Transcribed [en 42%]: And you can see the list.
+2026-08-21 13:07:30,378 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 13:07:30,384 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:07:32,813 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:07:32,823 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:07:32,869 [INFO] faster_whisper: Detected language 'en' with probability 0.26
+2026-08-21 13:07:37,817 [INFO] faster_whisper: Processing audio with duration 00:03.712
+2026-08-21 13:07:37,857 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:07:39,530 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:07:39,531 [INFO] jarvis.tools.speech_tools: speak: Sure, I can help with that. What list would you like to see? Could you provide m
+2026-08-21 13:07:39,534 [INFO] faster_whisper: Detected language 'en' with probability 0.88
+2026-08-21 13:07:41,556 [INFO] jarvis.inputs.gesture_input: Gesture watcher camera open at index 0.
+2026-08-21 13:07:41,732 [INFO] jarvis.inputs.voice_input: Transcribed [en 26%]: Save.
+2026-08-21 13:07:43,375 [INFO] faster_whisper: Detected language 'ta' with probability 0.94
+2026-08-21 13:07:43,829 [INFO] jarvis.inputs.voice_input: Transcribed [en 88%]: Alright, see you.
+2026-08-21 13:07:46,311 [INFO] jarvis.inputs.voice_input: Transcribed [ta 94%]: 900'றைக்கு 9.9% வைப்பிறகு.
+2026-08-21 13:08:00,706 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:08:00,707 [INFO] jarvis.tools.speech_tools: speak: Saving the current state or file? Could you please clarify which file or documen
+2026-08-21 13:08:17,764 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:08:17,765 [INFO] jarvis.tools.speech_tools: speak: Goodbye! If you need any assistance in the future, feel free to call me back. Sa
+2026-08-21 13:08:42,769 [WARNING] jarvis.tools.speech_tools: edge-tts failed (TTS generation timed out after 25 seconds.), falling back to pyttsx3
+2026-08-21 13:08:42,844 [INFO] comtypes.client._code_cache: Imported existing <module 'comtypes.gen' from 'D:\\Jarvis\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-08-21 13:08:42,844 [INFO] comtypes.client._code_cache: Using writeable comtypes cache directory: 'D:\Jarvis\.venv\Lib\site-packages\comtypes\gen'
+2026-08-21 13:09:06,355 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:09:06,355 [INFO] jarvis.tools.speech_tools: speak: 900 ரைக்கு 9.9% வைப்பிறகு, வடைவு ஆனது 89.1 ரைக்கு இருக்கும்.
+2026-08-21 13:09:27,594 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 13:09:27,601 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:09:29,764 [INFO] faster_whisper: Detected language 'es' with probability 0.23
+2026-08-21 13:09:31,811 [INFO] jarvis.inputs.voice_input: Transcribed [es 23%]: A por ser credible.
+2026-08-21 13:09:31,952 [INFO] faster_whisper: Processing audio with duration 00:02.432
+2026-08-21 13:09:31,958 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:09:34,169 [INFO] faster_whisper: Detected language 'zh' with probability 0.41
+2026-08-21 13:09:37,406 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 13:09:37,430 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:09:42,688 [INFO] jarvis.inputs.voice_input: Transcribed [zh 41%]: 音乐里边,阿里里的音乐
+2026-08-21 13:09:43,110 [INFO] faster_whisper: Detected language 'en' with probability 0.46
+2026-08-21 13:09:46,924 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 13:09:46,966 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:09:47,349 [INFO] jarvis.inputs.voice_input: Transcribed [en 46%]: My frame won't be...
+2026-08-21 13:09:50,201 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 13:09:50,211 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 13:09:50,617 [INFO] faster_whisper: Detected language 'en' with probability 0.32
+2026-08-21 13:09:53,850 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:09:53,851 [INFO] jarvis.tools.speech_tools: speak: Para ser credible, necesitamos un contexto más claro. ¿Podrías explicar en qué s
+2026-08-21 13:09:55,762 [INFO] faster_whisper: Detected language 'en' with probability 0.30
+2026-08-21 13:09:56,155 [INFO] jarvis.inputs.voice_input: Transcribed [en 32%]: Thank you.
+2026-08-21 13:09:58,204 [INFO] jarvis.inputs.voice_input: Transcribed [en 30%]: Thank you.
+2026-08-21 13:10:30,253 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:10:30,254 [INFO] jarvis.tools.speech_tools: speak: 好的，你想查找与“阿里里的音乐”相关的歌曲吗？让我帮你找找。 正在搜索“阿里里的音乐”... 找到了一些相关的歌曲，包括《阿里里》。你想听听这首歌吗？
+2026-08-21 13:10:31,218 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 13:10:34,047 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 13:10:34,065 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:10:36,801 [INFO] faster_whisper: Processing audio with duration 00:02.496
+2026-08-21 13:10:36,831 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:10:41,070 [INFO] faster_whisper: Detected language 'ko' with probability 0.25
+2026-08-21 13:10:41,439 [INFO] faster_whisper: Detected language 'ta' with probability 0.96
+2026-08-21 13:10:41,468 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:10:41,468 [INFO] jarvis.tools.speech_tools: speak: 了解了，你可能是在描述一个剧情或角色的台词。继续说吧，我会尽力帮你在音乐或剧情中找到合适的部分。
+2026-08-21 13:10:42,380 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 13:10:43,603 [INFO] faster_whisper: Processing audio with duration 00:01.024
+2026-08-21 13:10:43,622 [INFO] faster_whisper: VAD filter removed 00:00.240 of audio
+2026-08-21 13:10:46,400 [INFO] jarvis.inputs.voice_input: Transcribed [ko 25%]: 안녕하세요.
+2026-08-21 13:10:47,329 [INFO] faster_whisper: Processing audio with duration 00:02.304
+2026-08-21 13:10:47,352 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:10:48,986 [INFO] faster_whisper: Processing audio with duration 00:02.048
+2026-08-21 13:10:49,002 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:10:50,527 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:10:50,528 [INFO] jarvis.tools.speech_tools: speak: You're welcome! If you have any more lines or need help with anything else, feel
+2026-08-21 13:10:55,269 [INFO] jarvis.inputs.voice_input: Transcribed [ta 96%]: நான் பார்த்துக்கொண்டு விட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்ட
+2026-08-21 13:10:58,754 [INFO] faster_whisper: Detected language 'es' with probability 0.24
+2026-08-21 13:10:58,959 [INFO] faster_whisper: Detected language 'en' with probability 0.23
+2026-08-21 13:10:59,154 [INFO] faster_whisper: Detected language 'ta' with probability 0.41
+2026-08-21 13:11:01,735 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 13:11:01,741 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:11:03,598 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 13:11:03,610 [INFO] faster_whisper: VAD filter removed 00:00.432 of audio
+2026-08-21 13:11:06,061 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:11:06,062 [INFO] jarvis.tools.speech_tools: speak: You're welcome! If you need any more help, just let me know.
+2026-08-21 13:11:06,850 [INFO] jarvis.inputs.voice_input: Transcribed [es 24%]: ¡Golana!
+2026-08-21 13:11:08,964 [INFO] jarvis.inputs.voice_input: Transcribed [en 23%]: Photo print, photo, photo.
+2026-08-21 13:11:11,610 [INFO] jarvis.inputs.voice_input: Transcribed [ta 41%]: குற்று குற்று எடுத்துக்கொண்டு வேண்டும்.
+2026-08-21 13:11:11,820 [INFO] faster_whisper: Detected language 'hi' with probability 0.19
+2026-08-21 13:11:12,025 [INFO] faster_whisper: Detected language 'en' with probability 0.24
+2026-08-21 13:11:16,230 [INFO] jarvis.inputs.voice_input: Transcribed [hi 19%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 13:11:17,309 [INFO] jarvis.inputs.voice_input: Transcribed [en 24%]: I don't know if you can hear it.
+2026-08-21 13:11:18,729 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:11:18,730 [INFO] jarvis.tools.speech_tools: speak: 안녕하세요! 무엇을 도와드릴까요?
+2026-08-21 13:11:19,872 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 13:11:24,078 [INFO] faster_whisper: Processing audio with duration 00:04.096
+2026-08-21 13:11:24,111 [INFO] faster_whisper: VAD filter removed 00:00.240 of audio
+2026-08-21 13:11:27,604 [INFO] faster_whisper: Detected language 'ml' with probability 0.61
+2026-08-21 13:11:30,937 [INFO] faster_whisper: Processing audio with duration 00:02.048
+2026-08-21 13:11:30,946 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:11:32,077 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 13:11:32,099 [INFO] faster_whisper: VAD filter removed 00:00.240 of audio
+2026-08-21 13:11:35,412 [INFO] faster_whisper: Processing audio with duration 00:03.200
+2026-08-21 13:11:35,439 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:11:40,719 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:11:40,731 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:11:42,196 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:11:42,219 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 13:11:42,282 [INFO] jarvis.inputs.voice_input: Transcribed [ml 61%]: ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ � ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼
+2026-08-21 13:11:46,808 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:11:46,822 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:11:52,048 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 13:11:52,064 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:11:52,964 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:11:52,976 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:11:57,878 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 13:11:57,884 [INFO] faster_whisper: Detected language 'en' with probability 0.49
+2026-08-21 13:11:57,887 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:12:01,293 [INFO] faster_whisper: Detected language 'ja' with probability 0.34
+2026-08-21 13:12:01,691 [INFO] faster_whisper: Detected language 'ta' with probability 0.79
+2026-08-21 13:12:06,323 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:12:06,330 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 13:12:08,948 [INFO] faster_whisper: Processing audio with duration 00:02.240
+2026-08-21 13:12:08,965 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:12:09,079 [INFO] faster_whisper: Detected language 'en' with probability 0.40
+2026-08-21 13:12:09,609 [INFO] faster_whisper: Detected language 'en' with probability 0.35
+2026-08-21 13:12:10,046 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:12:10,061 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:12:10,494 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:12:10,495 [INFO] jarvis.tools.speech_tools: speak: நான் பார்த்துக்கொண்டு விட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்
+2026-08-21 13:12:13,668 [INFO] faster_whisper: Detected language 'en' with probability 0.20
+2026-08-21 13:12:17,323 [INFO] faster_whisper: Detected language 'en' with probability 0.46
+2026-08-21 13:12:19,226 [INFO] faster_whisper: Detected language 'en' with probability 0.74
+2026-08-21 13:12:28,519 [INFO] jarvis.inputs.voice_input: Transcribed [en 49%]: This is not a story.
+2026-08-21 13:12:28,984 [INFO] faster_whisper: Detected language 'es' with probability 0.25
+2026-08-21 13:12:32,074 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:12:32,074 [INFO] jarvis.tools.speech_tools: speak: ¡Golana! Parece que querías expresar algo emocionante. ¿Necesitas ayuda con algo
+2026-08-21 13:12:33,763 [INFO] jarvis.inputs.voice_input: Transcribed [ta 79%]: எத்தனையுடன் இது தரையுடன் தரையுடன் பலம்புரை விளையாட்டான்.
+2026-08-21 13:12:35,992 [INFO] faster_whisper: Detected language 'hi' with probability 0.37
+2026-08-21 13:12:38,130 [INFO] faster_whisper: Detected language 'hi' with probability 0.24
+2026-08-21 13:12:38,937 [INFO] jarvis.inputs.voice_input: Transcribed [en 35%]: Hallelujah.
+2026-08-21 13:12:39,185 [INFO] faster_whisper: Detected language 'ko' with probability 0.52
+2026-08-21 13:12:41,334 [INFO] jarvis.inputs.voice_input: Transcribed [en 20%]: Okay.
+2026-08-21 13:12:41,744 [INFO] jarvis.inputs.voice_input: Transcribed [en 46%]: Yeah, right here.
+2026-08-21 13:12:43,790 [INFO] jarvis.inputs.voice_input: Transcribed [en 74%]: Yeah.
+2026-08-21 13:12:47,930 [INFO] jarvis.inputs.voice_input: Transcribed [es 25%]: Si, el nago, por favor.
+2026-08-21 13:12:56,175 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 13:12:56,199 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:12:58,197 [INFO] jarvis.inputs.voice_input: Transcribed [hi 37%]: ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ
+2026-08-21 13:12:58,224 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 13:12:58,251 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:12:59,214 [INFO] jarvis.inputs.voice_input: Transcribed [hi 24%]: JAR, JAR, LOW.
+2026-08-21 13:13:00,573 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:13:00,575 [INFO] jarvis.tools.speech_tools: speak: Sure, I can help with that. Do you want to print a photo from a specific applica
+2026-08-21 13:13:03,633 [INFO] faster_whisper: Detected language 'ko' with probability 0.58
+2026-08-21 13:13:03,834 [INFO] faster_whisper: Detected language 'ta' with probability 0.39
+2026-08-21 13:13:13,243 [INFO] jarvis.inputs.voice_input: Transcribed [ta 39%]: YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJ
+2026-08-21 13:13:24,789 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 13:13:24,797 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 13:13:28,003 [INFO] faster_whisper: Detected language 'id' with probability 0.20
+2026-08-21 13:13:29,734 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:13:29,748 [INFO] faster_whisper: VAD filter removed 00:00.464 of audio
+2026-08-21 13:13:35,519 [INFO] jarvis.inputs.voice_input: Transcribed [id 20%]: Nah, kita kelatnya, ma'am?
+2026-08-21 13:13:35,671 [INFO] faster_whisper: Processing audio with duration 00:02.048
+2026-08-21 13:13:35,685 [INFO] faster_whisper: VAD filter removed 00:00.464 of audio
+2026-08-21 13:13:35,991 [INFO] faster_whisper: Detected language 'en' with probability 0.74
+2026-08-21 13:13:38,367 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:13:38,378 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:13:43,412 [INFO] faster_whisper: Processing audio with duration 00:03.520
+2026-08-21 13:13:43,461 [INFO] faster_whisper: VAD filter removed 00:01.648 of audio
+2026-08-21 13:13:45,830 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 13:13:49,763 [INFO] faster_whisper: Detected language 'en' with probability 0.21
+2026-08-21 13:13:53,619 [INFO] faster_whisper: Detected language 'ml' with probability 0.74
+2026-08-21 13:13:58,068 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:13:58,073 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:14:02,093 [INFO] jarvis.inputs.voice_input: Transcribed [en 21%]: No idea.
+2026-08-21 13:14:05,174 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-21 13:14:05,175 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, take_screenshot, control_volume, control_media, show_desktop, search_web, speak
+2026-08-21 13:14:05,456 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-21 13:14:05,462 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-21 13:14:06,773 [INFO] jarvis.inputs.voice_input: Loading speech recognition model (small, cpu)...
+2026-08-21 13:14:06,962 [INFO] jarvis.inputs.voice_input: Microphone calibrated: noise_floor=0.0134, speech_threshold=0.0295
+2026-08-21 13:14:07,409 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 13:14:07,422 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:14:09,598 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-08-21 13:14:10,282 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:14:10,283 [INFO] jarvis.tools.speech_tools: speak: குற்று குற்று எடுத்துக்கொண்டு வேண்டும். எந்த புதிய குற்று பயன்பாட்டை உங்களுக்கு 
+2026-08-21 13:14:12,885 [INFO] jarvis.inputs.voice_input: Speech recognition model ready.
+2026-08-21 13:14:12,885 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:14:13,073 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:14:16,413 [INFO] faster_whisper: Detected language 'en' with probability 0.93
+2026-08-21 13:14:16,650 [INFO] main: JARVIS shutdown complete.
+2026-08-21 13:14:17,182 [INFO] jarvis.inputs.voice_input: Transcribed [ml 74%]: ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ � ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼
+2026-08-21 13:14:17,521 [INFO] faster_whisper: Detected language 'en' with probability 0.81
+2026-08-21 13:14:21,236 [INFO] faster_whisper: Detected language 'en' with probability 0.56
+2026-08-21 13:14:21,605 [INFO] jarvis.inputs.voice_input: Transcribed [en 81%]: Planet India.
+2026-08-21 13:14:23,817 [INFO] jarvis.inputs.voice_input: Transcribed [en 56%]: Hey, JARVIS.
+2026-08-21 13:14:39,183 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 13:14:39,195 [INFO] faster_whisper: VAD filter removed 00:00.048 of audio
+2026-08-21 13:14:41,366 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 13:14:41,375 [INFO] faster_whisper: VAD filter removed 00:00.880 of audio
+2026-08-21 13:58:40,638 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 13:58:40,793 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:58:42,214 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 13:58:42,238 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:58:48,010 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 13:58:48,023 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:58:49,814 [INFO] faster_whisper: Detected language 'ta' with probability 0.51
+2026-08-21 13:58:51,779 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 13:58:51,809 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 13:58:53,955 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:58:53,957 [INFO] jarvis.tools.speech_tools: speak: Sure, JARVIS will take a screenshot, adjust the volume, control the browser, and
+2026-08-21 13:58:53,980 [WARNING] jarvis.tools.speech_tools: edge-tts failed (Cannot connect to host speech.platform.bing.com:443 ssl:<ssl.SSLContext object at 0x000002C00140C500> [getaddrinfo failed]), falling back to pyttsx3
+2026-08-21 13:58:58,370 [INFO] faster_whisper: Processing audio with duration 00:03.392
+2026-08-21 13:58:58,403 [INFO] faster_whisper: VAD filter removed 00:00.080 of audio
+2026-08-21 13:58:59,666 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:58:59,687 [INFO] faster_whisper: VAD filter removed 00:00.688 of audio
+2026-08-21 13:59:01,040 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:59:01,105 [INFO] faster_whisper: VAD filter removed 00:00.336 of audio
+2026-08-21 13:59:04,901 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:59:04,902 [INFO] faster_whisper: Processing audio with duration 00:02.240
+2026-08-21 13:59:04,903 [INFO] jarvis.tools.speech_tools: speak: I can hear you! What would you like to do next? Do you want to play, pause, or s
+2026-08-21 13:59:04,918 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:59:05,758 [INFO] faster_whisper: Detected language 'en' with probability 0.49
+2026-08-21 13:59:10,328 [INFO] faster_whisper: Detected language 'en' with probability 0.47
+2026-08-21 13:59:10,563 [INFO] faster_whisper: Detected language 'en' with probability 0.39
+2026-08-21 13:59:17,666 [INFO] faster_whisper: Detected language 'ms' with probability 0.15
+2026-08-21 13:59:18,422 [INFO] faster_whisper: Processing audio with duration 00:02.752
+2026-08-21 13:59:18,455 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:59:21,406 [INFO] faster_whisper: Processing audio with duration 00:02.496
+2026-08-21 13:59:21,429 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:59:22,833 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 13:59:22,838 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:59:22,875 [INFO] jarvis.inputs.voice_input: Transcribed [ta 51%]: மாடல் ரெடி.
+2026-08-21 13:59:23,198 [INFO] faster_whisper: Detected language 'hi' with probability 0.37
+2026-08-21 13:59:24,874 [INFO] faster_whisper: Processing audio with duration 00:02.112
+2026-08-21 13:59:24,888 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:59:27,442 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 13:59:27,442 [INFO] jarvis.tools.speech_tools: speak: It seems like you're trying to use emoticons or some text formatting. Let's focu
+2026-08-21 13:59:28,385 [INFO] faster_whisper: Detected language 'hi' with probability 0.27
+2026-08-21 13:59:28,570 [INFO] faster_whisper: Detected language 'en' with probability 0.46
+2026-08-21 13:59:28,778 [INFO] faster_whisper: Detected language 'en' with probability 0.55
+2026-08-21 13:59:28,993 [INFO] faster_whisper: Detected language 'ta' with probability 0.94
+2026-08-21 13:59:38,983 [INFO] jarvis.inputs.voice_input: Transcribed [en 47%]: Tamil.
+2026-08-21 13:59:39,331 [INFO] jarvis.inputs.voice_input: Transcribed [en 39%]: It's possible.
+2026-08-21 13:59:46,687 [INFO] jarvis.inputs.voice_input: Transcribed [ms 15%]: YAMU IN.
+2026-08-21 13:59:46,956 [INFO] faster_whisper: Detected language 'ko' with probability 0.42
+2026-08-21 13:59:47,230 [INFO] faster_whisper: Detected language 'en' with probability 0.23
+2026-08-21 13:59:47,496 [INFO] faster_whisper: Detected language 'ko' with probability 0.21
+2026-08-21 13:59:47,968 [INFO] jarvis.inputs.voice_input: Transcribed [hi 37%]: Capture Swallow
+2026-08-21 13:59:48,198 [INFO] faster_whisper: Detected language 'ta' with probability 0.99
+2026-08-21 13:59:48,611 [INFO] jarvis.inputs.voice_input: Transcribed [hi 27%]: VL voted.
+2026-08-21 13:59:50,240 [INFO] jarvis.inputs.voice_input: Transcribed [ta 94%]: ஏன் அந்த தம்பில் ஏங்க வாத்திருக்கிறாய்?
+2026-08-21 13:59:56,517 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 13:59:56,524 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 13:59:56,580 [INFO] jarvis.inputs.voice_input: Transcribed [ko 42%]: 아, 왜? 아, 왜 이렇게?
+2026-08-21 13:59:56,892 [INFO] jarvis.inputs.voice_input: Transcribed [en 23%]: Thank you.
+2026-08-21 13:59:59,621 [INFO] jarvis.inputs.voice_input: Transcribed [ta 99%]: இங்கு வருங்கள், இங்கு வைத்து வைத்துவிட்டு வருங்கள்.
+2026-08-21 14:00:02,348 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:00:02,361 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:04,634 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:00:04,635 [INFO] jarvis.tools.speech_tools: speak: Understood. What would you like to do next? Do you need help with controlling th
+2026-08-21 14:00:05,223 [INFO] faster_whisper: Detected language 'zh' with probability 0.20
+2026-08-21 14:00:05,400 [INFO] faster_whisper: Detected language 'ko' with probability 0.49
+2026-08-21 14:00:08,841 [INFO] jarvis.inputs.voice_input: Transcribed [zh 20%]: 3.2.1
+2026-08-21 14:00:09,164 [INFO] jarvis.inputs.voice_input: Transcribed [ko 49%]: 안녕.
+2026-08-21 14:00:11,410 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-21 14:00:11,410 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, take_screenshot, control_volume, control_media, show_desktop, search_web, speak
+2026-08-21 14:00:11,510 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-21 14:00:11,514 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-21 14:00:11,778 [INFO] jarvis.inputs.voice_input: Loading speech recognition model (small, cpu)...
+2026-08-21 14:00:12,637 [INFO] jarvis.inputs.voice_input: Microphone calibrated: noise_floor=0.0424, speech_threshold=0.0933
+2026-08-21 14:00:13,053 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-08-21 14:00:14,507 [INFO] jarvis.inputs.voice_input: Speech recognition model ready.
+2026-08-21 14:00:17,688 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:00:17,968 [INFO] faster_whisper: Processing audio with duration 00:00.960
+2026-08-21 14:00:17,972 [INFO] faster_whisper: VAD filter removed 00:00.112 of audio
+2026-08-21 14:00:18,152 [INFO] faster_whisper: VAD filter removed 00:00.080 of audio
+2026-08-21 14:00:19,646 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:00:19,660 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:22,431 [INFO] faster_whisper: Detected language 'en' with probability 0.24
+2026-08-21 14:00:22,660 [INFO] faster_whisper: Processing audio with duration 00:03.264
+2026-08-21 14:00:22,681 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:25,788 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:00:25,795 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:26,860 [INFO] faster_whisper: Detected language 'en' with probability 0.76
+2026-08-21 14:00:29,301 [INFO] faster_whisper: Processing audio with duration 00:03.840
+2026-08-21 14:00:29,327 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:33,024 [INFO] faster_whisper: Detected language 'ml' with probability 0.45
+2026-08-21 14:00:34,300 [INFO] jarvis.inputs.gesture_input: Gesture watcher camera open at index 0.
+2026-08-21 14:00:35,442 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:00:35,455 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:38,853 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.82)
+2026-08-21 14:00:39,019 [INFO] faster_whisper: Processing audio with duration 00:02.752
+2026-08-21 14:00:39,028 [INFO] faster_whisper: Detected language 'ta' with probability 0.81
+2026-08-21 14:00:39,062 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:39,671 [INFO] faster_whisper: Detected language 'en' with probability 0.44
+2026-08-21 14:00:43,343 [INFO] jarvis.inputs.voice_input: Transcribed [en 76%]: Thank you.
+2026-08-21 14:00:43,700 [INFO] faster_whisper: Detected language 'en' with probability 0.39
+2026-08-21 14:00:44,220 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.83)
+2026-08-21 14:00:46,059 [INFO] faster_whisper: Processing audio with duration 00:06.144
+2026-08-21 14:00:46,080 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:50,593 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.81)
+2026-08-21 14:00:51,319 [INFO] faster_whisper: Processing audio with duration 00:02.368
+2026-08-21 14:00:51,337 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:52,179 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Open_Palm (confidence: 0.82)
+2026-08-21 14:00:53,739 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 14:00:53,749 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:54,746 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.88)
+2026-08-21 14:00:57,307 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.95)
+2026-08-21 14:00:57,842 [INFO] faster_whisper: Processing audio with duration 00:04.224
+2026-08-21 14:00:57,865 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:00:59,948 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.94)
+2026-08-21 14:01:01,359 [INFO] faster_whisper: Processing audio with duration 00:02.432
+2026-08-21 14:01:01,369 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:03,219 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:01:03,230 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:05,651 [INFO] faster_whisper: Processing audio with duration 00:02.752
+2026-08-21 14:01:05,676 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:06,971 [INFO] jarvis.inputs.voice_input: Transcribed [ml 45%]: ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ �
+2026-08-21 14:01:09,168 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.82)
+2026-08-21 14:01:09,423 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:01:09,441 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:11,753 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:01:11,754 [INFO] jarvis.tools.speech_tools: speak: இது தரையுடன் தரையுடன் பலம்புரை விளையாட்டான் என்று கருதப்படுகிறது. நீங்கள் பலம்பு
+2026-08-21 14:01:12,350 [INFO] faster_whisper: Detected language 'ko' with probability 0.29
+2026-08-21 14:01:12,461 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.97)
+2026-08-21 14:01:17,313 [INFO] jarvis.inputs.voice_input: Transcribed [ta 81%]: அதை சின்னக்காய் இட்டு விட்டு ஜாஜிங்களை விட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட
+2026-08-21 14:01:19,207 [INFO] faster_whisper: Detected language 'ta' with probability 0.55
+2026-08-21 14:01:21,158 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Victory (confidence: 0.82)
+2026-08-21 14:01:21,190 [INFO] jarvis.inputs.voice_input: Transcribed [en 44%]: Main points, but no more.
+2026-08-21 14:01:24,548 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:01:24,553 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:25,759 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:01:25,768 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:26,590 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:01:26,598 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:30,628 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:01:30,638 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:32,287 [INFO] faster_whisper: Detected language 'hi' with probability 0.60
+2026-08-21 14:01:32,750 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:01:32,811 [INFO] jarvis.inputs.voice_input: Transcribed [en 39%]: That's why I gave it to the chat team.
+2026-08-21 14:01:32,800 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:33,013 [INFO] faster_whisper: Detected language 'es' with probability 0.60
+2026-08-21 14:01:33,391 [INFO] faster_whisper: Processing audio with duration 00:02.496
+2026-08-21 14:01:33,402 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:33,438 [INFO] faster_whisper: Detected language 'ta' with probability 0.96
+2026-08-21 14:01:34,667 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:01:34,679 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:34,877 [INFO] faster_whisper: Processing audio with duration 00:01.536
+2026-08-21 14:01:34,887 [INFO] faster_whisper: VAD filter removed 00:00.096 of audio
+2026-08-21 14:01:36,992 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:01:37,005 [INFO] faster_whisper: VAD filter removed 00:00.080 of audio
+2026-08-21 14:01:37,713 [INFO] faster_whisper: Detected language 'hi' with probability 0.59
+2026-08-21 14:01:38,176 [INFO] faster_whisper: Detected language 'ko' with probability 0.29
+2026-08-21 14:01:38,840 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:01:38,883 [INFO] faster_whisper: VAD filter removed 00:00.176 of audio
+2026-08-21 14:01:43,310 [INFO] faster_whisper: Processing audio with duration 00:03.392
+2026-08-21 14:01:43,328 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:43,980 [INFO] faster_whisper: Detected language 'sv' with probability 0.14
+2026-08-21 14:01:44,639 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:01:44,640 [INFO] jarvis.tools.speech_tools: speak: Hallelujah! It seems like you're enjoying the song or perhaps sharing a moment. 
+2026-08-21 14:01:44,857 [INFO] faster_whisper: Detected language 'ta' with probability 0.24
+2026-08-21 14:01:45,244 [INFO] faster_whisper: Detected language 'zh' with probability 0.44
+2026-08-21 14:01:45,643 [INFO] faster_whisper: Detected language 'en' with probability 0.21
+2026-08-21 14:01:46,007 [INFO] faster_whisper: Detected language 'hi' with probability 0.33
+2026-08-21 14:01:46,376 [INFO] faster_whisper: Detected language 'es' with probability 0.61
+2026-08-21 14:01:48,928 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:01:48,936 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:51,395 [INFO] faster_whisper: Detected language 'ml' with probability 0.43
+2026-08-21 14:01:52,640 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 14:01:52,651 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:01:55,216 [INFO] jarvis.inputs.voice_input: Transcribed [hi 60%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:01:55,577 [INFO] faster_whisper: Detected language 'en' with probability 0.45
+2026-08-21 14:01:57,964 [INFO] jarvis.inputs.voice_input: Transcribed [es 60%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:01:58,352 [INFO] jarvis.inputs.voice_input: Transcribed [ko 29%]: 감사합니다.
+2026-08-21 14:01:59,007 [INFO] faster_whisper: Processing audio with duration 00:01.536
+2026-08-21 14:01:59,023 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:03,068 [INFO] faster_whisper: Detected language 'hi' with probability 0.44
+2026-08-21 14:02:04,443 [INFO] faster_whisper: Processing audio with duration 00:01.984
+2026-08-21 14:02:04,462 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:09,816 [INFO] jarvis.inputs.voice_input: Transcribed [ta 55%]: நீயாது பர்வாமல்லை.
+2026-08-21 14:02:10,650 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:02:10,660 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:13,210 [INFO] faster_whisper: Processing audio with duration 00:02.176
+2026-08-21 14:02:13,225 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:15,310 [INFO] jarvis.inputs.voice_input: Transcribed [hi 59%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:02:15,531 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:02:15,547 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:18,267 [INFO] faster_whisper: Processing audio with duration 00:02.688
+2026-08-21 14:02:18,278 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:20,662 [INFO] faster_whisper: Detected language 'en' with probability 0.39
+2026-08-21 14:02:26,527 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.86)
+2026-08-21 14:02:31,092 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Open_Palm (confidence: 0.83)
+2026-08-21 14:02:32,576 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.95)
+2026-08-21 14:02:33,256 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:02:33,257 [INFO] jarvis.orchestrator: Calling tool: take_screenshot({})
+2026-08-21 14:02:33,464 [INFO] jarvis.tools.system_tools: Screenshot saved: D:\Jarvis\screenshots\screenshot_1787301153.png
+2026-08-21 14:02:33,468 [INFO] jarvis.orchestrator: Calling tool: control_volume({'action': 'up', 'steps': 2})
+2026-08-21 14:02:33,471 [INFO] jarvis.orchestrator: Calling tool: open_application({'app_name': 'browser'})
+2026-08-21 14:02:33,472 [INFO] jarvis.tools.system_tools: open_application: browser
+2026-08-21 14:02:33,508 [INFO] jarvis.orchestrator: Calling tool: control_media({'action': 'play'})
+2026-08-21 14:02:33,509 [INFO] jarvis.orchestrator: Calling tool: search_web({'query': 'Tamil to English translation', 'max_results': 5})
+2026-08-21 14:02:33,509 [INFO] jarvis.tools.web_tools: search_web: Tamil to English translation
+2026-08-21 14:02:33,838 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.97)
+2026-08-21 14:02:35,031 [INFO] primp: response: https://grokipedia.com/api/typeahead?query=Tamil+to+English+translation&limit=1 200
+2026-08-21 14:02:35,413 [INFO] primp: response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=Tamil%20to%20English%20translation 200
+2026-08-21 14:02:36,111 [INFO] jarvis.inputs.voice_input: Transcribed [sv 14%]: Jag suttar till honom där.
+2026-08-21 14:02:36,545 [INFO] faster_whisper: Detected language 'en' with probability 0.38
+2026-08-21 14:02:36,716 [INFO] primp: response: https://search.yahoo.com/search;_ylt=0DqhxvudPYw5NIpmV_yIDrkY;_ylu=WluXFeVmACAzq-S7y_hQINrZQ1swYWNWU2QIp3IZY0Zqge8?p=Tamil+to+English+translation 200
+2026-08-21 14:02:39,974 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.83)
+2026-08-21 14:02:41,497 [INFO] faster_whisper: Processing audio with duration 00:04.864
+2026-08-21 14:02:41,531 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:42,367 [INFO] faster_whisper: Detected language 'en' with probability 0.96
+2026-08-21 14:02:43,107 [INFO] jarvis.inputs.voice_input: Transcribed [en 45%]: Thank you.
+2026-08-21 14:02:44,437 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 14:02:44,447 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:45,786 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:02:45,792 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:50,077 [INFO] jarvis.inputs.voice_input: Transcribed [ta 96%]: ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து?
+2026-08-21 14:02:50,126 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:02:50,127 [INFO] jarvis.tools.speech_tools: speak: Okay! How can I assist you further?
+2026-08-21 14:02:50,314 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Open_Palm (confidence: 0.82)
+2026-08-21 14:02:50,565 [INFO] faster_whisper: Detected language 'hi' with probability 0.40
+2026-08-21 14:02:50,941 [INFO] faster_whisper: Detected language 'en' with probability 0.31
+2026-08-21 14:02:51,921 [INFO] jarvis.inputs.voice_input: Transcribed [en 96%]: Make this all or perhaps sharing a moment.
+2026-08-21 14:02:54,547 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.94)
+2026-08-21 14:02:57,578 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:02:57,587 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:02:57,986 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.93)
+2026-08-21 14:03:03,208 [INFO] faster_whisper: Processing audio with duration 00:04.416
+2026-08-21 14:03:03,229 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.92)
+2026-08-21 14:03:03,235 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:03,460 [INFO] jarvis.inputs.voice_input: Transcribed [ko 29%]: 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아
+2026-08-21 14:03:05,137 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:03:05,142 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:05,536 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Open_Palm (confidence: 0.80)
+2026-08-21 14:03:06,026 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:03:06,038 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:06,538 [INFO] faster_whisper: Detected language 'en' with probability 0.68
+2026-08-21 14:03:07,673 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Open_Palm (confidence: 0.82)
+2026-08-21 14:03:08,139 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:03:08,148 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:09,869 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:03:09,872 [INFO] jarvis.tools.speech_tools: speak: I have taken a screenshot and increased the volume by 2 steps. However, the brow
+2026-08-21 14:03:10,211 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.94)
+2026-08-21 14:03:11,424 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Victory (confidence: 0.92)
+2026-08-21 14:03:11,630 [INFO] faster_whisper: Detected language 'ta' with probability 0.98
+2026-08-21 14:03:14,466 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:03:14,473 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:17,742 [INFO] faster_whisper: Processing audio with duration 00:02.432
+2026-08-21 14:03:17,753 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:18,461 [INFO] jarvis.inputs.voice_input: Transcribed [ta 24%]: நான் இன்னால் இங்கு நான் பிட்சுப் போல்லாம் என்னை நிச்சயம் மனிப்போலம் போல்லாம்.
+2026-08-21 14:03:18,972 [INFO] jarvis.inputs.voice_input: Transcribed [zh 44%]: 下单本期我们再来看
+2026-08-21 14:03:19,331 [INFO] jarvis.inputs.voice_input: Transcribed [en 21%]: Thank you.
+2026-08-21 14:03:19,655 [INFO] faster_whisper: Processing audio with duration 00:02.240
+2026-08-21 14:03:19,666 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:20,092 [INFO] jarvis.inputs.voice_input: Transcribed [hi 33%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:03:26,001 [INFO] faster_whisper: Processing audio with duration 00:06.272
+2026-08-21 14:03:26,036 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:30,977 [INFO] faster_whisper: Processing audio with duration 00:05.248
+2026-08-21 14:03:31,020 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:03:32,262 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:03:32,264 [INFO] jarvis.tools.speech_tools: speak: Got it! Is there anything specific you need help with right here? Whether it's a
+2026-08-21 14:03:33,805 [INFO] faster_whisper: Detected language 'ta' with probability 0.38
+2026-08-21 14:03:36,332 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:03:36,339 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:39,412 [INFO] faster_whisper: Detected language 'pt' with probability 0.20
+2026-08-21 14:03:42,891 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Thumb_Up (confidence: 0.81)
+2026-08-21 14:03:44,627 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:03:44,649 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:46,915 [INFO] faster_whisper: Processing audio with duration 00:01.024
+2026-08-21 14:03:46,925 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:47,821 [INFO] faster_whisper: Detected language 'es' with probability 0.79
+2026-08-21 14:03:53,913 [INFO] faster_whisper: Detected language 'en' with probability 0.97
+2026-08-21 14:03:54,346 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 14:03:54,363 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:03:56,005 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:03:56,017 [INFO] faster_whisper: VAD filter removed 00:00.704 of audio
+2026-08-21 14:03:56,874 [INFO] faster_whisper: Detected language 'hi' with probability 0.24
+2026-08-21 14:03:57,530 [INFO] faster_whisper: Detected language 'ta' with probability 0.28
+2026-08-21 14:04:01,105 [INFO] jarvis.inputs.voice_input: Transcribed [en 97%]: Anything else? Just like...
+2026-08-21 14:04:01,897 [INFO] faster_whisper: Detected language 'zh' with probability 0.44
+2026-08-21 14:04:02,533 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:04:02,541 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:04:06,155 [INFO] jarvis.inputs.voice_input: Transcribed [es 61%]: ¡Dios!
+2026-08-21 14:04:06,550 [INFO] faster_whisper: Detected language 'ta' with probability 0.91
+2026-08-21 14:04:13,165 [INFO] jarvis.inputs.voice_input: Transcribed [en 38%]: Thank you.
+2026-08-21 14:04:13,639 [INFO] faster_whisper: Detected language 'ta' with probability 0.88
+2026-08-21 14:04:13,805 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:04:13,816 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:04:14,881 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:04:14,888 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:04:17,048 [INFO] faster_whisper: Detected language 'ta' with probability 0.36
+2026-08-21 14:04:17,403 [INFO] faster_whisper: Detected language 'hi' with probability 0.44
+2026-08-21 14:04:18,400 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:04:18,406 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:04:19,568 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Open_Palm (confidence: 0.81)
+2026-08-21 14:04:21,508 [INFO] jarvis.inputs.voice_input: Transcribed [hi 40%]: JARVIS
+2026-08-21 14:04:21,545 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:04:21,560 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:04:22,298 [INFO] jarvis.inputs.voice_input: Transcribed [en 31%]: So nice.
+2026-08-21 14:04:22,696 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:04:22,723 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:04:25,476 [INFO] faster_whisper: Detected language 'en' with probability 0.44
+2026-08-21 14:04:26,025 [INFO] faster_whisper: Detected language 'es' with probability 0.45
+2026-08-21 14:04:26,532 [INFO] faster_whisper: Detected language 'zh' with probability 0.21
+2026-08-21 14:04:27,008 [INFO] faster_whisper: Detected language 'ta' with probability 0.46
+2026-08-21 14:04:30,258 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.94)
+2026-08-21 14:04:31,353 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:04:31,354 [INFO] jarvis.tools.speech_tools: speak: I have taken a screenshot and increased the volume. The browser application has 
+2026-08-21 14:04:32,990 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Open_Palm (confidence: 0.83)
+2026-08-21 14:04:33,890 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 14:04:33,900 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:04:35,489 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.98)
+2026-08-21 14:04:35,892 [INFO] faster_whisper: Detected language 'es' with probability 0.24
+2026-08-21 14:04:40,646 [INFO] jarvis.inputs.voice_input: Transcribed [ta 98%]: அடிக்கைப் போகிறான் அண்ணா, இந்த ஆயிறையைப் போல நான் மாட்டில் உடுங்கள்.
+2026-08-21 14:04:43,871 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 14:04:43,880 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:04:44,097 [INFO] faster_whisper: Detected language 'hi' with probability 0.28
+2026-08-21 14:04:46,300 [INFO] faster_whisper: Processing audio with duration 00:02.496
+2026-08-21 14:04:46,317 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:04:46,459 [INFO] faster_whisper: Detected language 'en' with probability 0.93
+2026-08-21 14:04:46,914 [INFO] faster_whisper: Detected language 'en' with probability 0.92
+2026-08-21 14:04:47,260 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:04:47,264 [INFO] faster_whisper: VAD filter removed 00:00.048 of audio
+2026-08-21 14:04:48,879 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:04:48,880 [INFO] jarvis.tools.speech_tools: speak: Sure thing! What do you need help with right now?
+2026-08-21 14:04:50,673 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.87)
+2026-08-21 14:04:51,885 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.99)
+2026-08-21 14:04:53,045 [INFO] faster_whisper: Detected language 'en' with probability 0.65
+2026-08-21 14:04:53,131 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.94)
+2026-08-21 14:04:54,350 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.95)
+2026-08-21 14:04:58,103 [INFO] faster_whisper: Detected language 'en' with probability 0.77
+2026-08-21 14:05:01,689 [INFO] jarvis.inputs.voice_input: Transcribed [ta 38%]: JARVIS, thumbnail base.
+2026-08-21 14:05:08,977 [INFO] faster_whisper: Detected language 'en' with probability 0.44
+2026-08-21 14:05:09,217 [INFO] faster_whisper: Processing audio with duration 00:04.416
+2026-08-21 14:05:09,242 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:09,500 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.88)
+2026-08-21 14:05:10,077 [INFO] jarvis.inputs.voice_input: Transcribed [es 79%]: JARVIS, dame la PC.
+2026-08-21 14:05:11,718 [INFO] faster_whisper: Processing audio with duration 00:02.176
+2026-08-21 14:05:11,731 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:12,155 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.94)
+2026-08-21 14:05:13,499 [INFO] faster_whisper: Detected language 'en' with probability 0.23
+2026-08-21 14:05:13,876 [INFO] faster_whisper: Detected language 'en' with probability 0.37
+2026-08-21 14:05:15,620 [INFO] faster_whisper: Processing audio with duration 00:03.712
+2026-08-21 14:05:15,649 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:15,820 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.80)
+2026-08-21 14:05:17,859 [INFO] faster_whisper: Processing audio with duration 00:02.560
+2026-08-21 14:05:17,876 [INFO] faster_whisper: VAD filter removed 00:00.096 of audio
+2026-08-21 14:05:18,015 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:05:18,017 [INFO] jarvis.tools.speech_tools: speak: ¡Claro! ¿Necesitas que haga algo en particular o simplemente querrás que esté a 
+2026-08-21 14:05:18,056 [INFO] jarvis.inputs.voice_input: Transcribed [hi 24%]: लग्ती से चीजी.
+2026-08-21 14:05:19,208 [INFO] jarvis.inputs.voice_input: Transcribed [ta 28%]: கிசோராவும் அப்பம் பிறகு முறுக்கண்டா.
+2026-08-21 14:05:19,633 [INFO] jarvis.inputs.voice_input: Transcribed [zh 44%]: 接下來切碼
+2026-08-21 14:05:19,882 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:05:24,004 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:05:24,011 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:25,178 [INFO] jarvis.inputs.voice_input: Transcribed [ta 91%]: என்னுடையதான் அது எதுவும் செய்யமாடிக்கொண்டும்
+2026-08-21 14:05:27,355 [INFO] faster_whisper: Detected language 'en' with probability 0.90
+2026-08-21 14:05:28,479 [INFO] main: JARVIS shutdown complete.
+2026-08-21 14:05:31,143 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:05:31,151 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:32,040 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:05:32,049 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:39,615 [INFO] jarvis.inputs.voice_input: Transcribed [ta 88%]: நான் எங்கேடா என்னை நிறுக்கொண்டு வாக்கிறேன்? நான் இப்போதுதான் கையை வைத்திருந்துவிடு.
+2026-08-21 14:05:39,879 [INFO] faster_whisper: Detected language 'jw' with probability 0.25
+2026-08-21 14:05:40,137 [INFO] faster_whisper: Detected language 'zh' with probability 0.28
+2026-08-21 14:05:41,060 [INFO] faster_whisper: Processing audio with duration 00:02.688
+2026-08-21 14:05:41,068 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:42,917 [INFO] jarvis.inputs.voice_input: Transcribed [ta 36%]: இப்போது நான் பட்டைக்கொண்டும் என்று நான் படிக்கொண்டும்.
+2026-08-21 14:05:43,714 [INFO] jarvis.inputs.voice_input: Transcribed [hi 44%]: त्राइं भूँ नीटरे याजा.
+2026-08-21 14:05:43,911 [INFO] faster_whisper: Detected language 'en' with probability 0.16
+2026-08-21 14:05:44,702 [INFO] faster_whisper: Processing audio with duration 00:03.520
+2026-08-21 14:05:44,716 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:45,541 [INFO] faster_whisper: Detected language 'ko' with probability 0.30
+2026-08-21 14:05:45,742 [INFO] faster_whisper: Detected language 'zh' with probability 0.44
+2026-08-21 14:05:46,147 [INFO] jarvis.inputs.voice_input: Transcribed [en 44%]: Yeah, wait, here we go.
+2026-08-21 14:05:46,501 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:05:46,507 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:46,879 [INFO] jarvis.inputs.voice_input: Transcribed [es 45%]: Quieres que nos ponga o ponga o ponga, pero o sea, en el reino.
+2026-08-21 14:05:47,171 [INFO] jarvis.inputs.voice_input: Transcribed [zh 21%]: 差不多了
+2026-08-21 14:05:47,763 [INFO] jarvis.inputs.voice_input: Transcribed [ta 46%]: சமாப்பொழுக்கு ரா.
+2026-08-21 14:05:48,480 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:05:48,486 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:49,631 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:05:49,636 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:52,566 [INFO] faster_whisper: Detected language 'ta' with probability 0.50
+2026-08-21 14:05:53,935 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:05:53,944 [INFO] faster_whisper: VAD filter removed 00:00.112 of audio
+2026-08-21 14:05:56,674 [INFO] faster_whisper: Processing audio with duration 00:02.112
+2026-08-21 14:05:56,686 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:05:59,973 [INFO] jarvis.inputs.voice_input: Transcribed [es 24%]: Pero...
+2026-08-21 14:06:02,556 [INFO] faster_whisper: Detected language 'en' with probability 0.15
+2026-08-21 14:06:03,694 [INFO] jarvis.inputs.voice_input: Transcribed [hi 28%]: इस्वर नाँड़े.
+2026-08-21 14:06:04,069 [INFO] faster_whisper: Detected language 'en' with probability 0.92
+2026-08-21 14:06:07,189 [INFO] jarvis.inputs.voice_input: Transcribed [en 93%]: I have taken a screenshot and increased the volume.
+2026-08-21 14:06:10,004 [INFO] jarvis.inputs.voice_input: Transcribed [en 92%]: Volume by two steps.
+2026-08-21 14:06:10,300 [INFO] faster_whisper: Detected language 'en' with probability 0.68
+2026-08-21 14:06:14,663 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:06:14,671 [INFO] faster_whisper: VAD filter removed 00:00.496 of audio
+2026-08-21 14:06:18,300 [INFO] faster_whisper: Processing audio with duration 00:03.584
+2026-08-21 14:06:18,317 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:18,724 [INFO] jarvis.inputs.voice_input: Transcribed [en 65%]: However, the browser application was not found. Please ensure it is installed and on your path.
+2026-08-21 14:06:19,336 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:06:19,343 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:23,620 [INFO] faster_whisper: Processing audio with duration 00:04.544
+2026-08-21 14:06:23,646 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:24,463 [INFO] jarvis.inputs.voice_input: Transcribed [en 77%]: Yeah, not a problem.
+2026-08-21 14:06:25,600 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:06:25,609 [INFO] faster_whisper: VAD filter removed 00:00.208 of audio
+2026-08-21 14:06:26,501 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:06:26,507 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:28,741 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:06:28,747 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:30,988 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:06:31,001 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:31,870 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:06:31,881 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:37,293 [INFO] faster_whisper: Detected language 'en' with probability 0.49
+2026-08-21 14:06:37,596 [INFO] faster_whisper: Detected language 'en' with probability 0.99
+2026-08-21 14:06:37,700 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:06:37,712 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:38,287 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:06:38,288 [INFO] jarvis.tools.speech_tools: speak: ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ ॐ 
+2026-08-21 14:06:39,294 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:06:42,196 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:06:42,210 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:44,560 [INFO] faster_whisper: Detected language 'en' with probability 0.67
+2026-08-21 14:06:44,901 [INFO] faster_whisper: Detected language 'en' with probability 0.97
+2026-08-21 14:06:45,396 [INFO] faster_whisper: Processing audio with duration 00:01.536
+2026-08-21 14:06:45,407 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:06:47,746 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:06:47,747 [INFO] jarvis.tools.speech_tools: speak: JARVIS, lowering volume... Volume has been lowered. Is there anything specific y
+2026-08-21 14:06:49,125 [INFO] faster_whisper: Detected language 'en' with probability 0.82
+2026-08-21 14:06:49,319 [INFO] faster_whisper: Detected language 'en' with probability 0.32
+2026-08-21 14:06:51,400 [INFO] jarvis.inputs.voice_input: Transcribed [jw 25%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:06:53,081 [INFO] jarvis.inputs.voice_input: Transcribed [zh 28%]: Mia
+2026-08-21 14:06:53,258 [INFO] faster_whisper: Detected language 'ta' with probability 0.67
+2026-08-21 14:06:56,393 [INFO] jarvis.inputs.voice_input: Transcribed [en 16%]: And then, the link.
+2026-08-21 14:06:58,084 [INFO] faster_whisper: Detected language 'ta' with probability 0.49
+2026-08-21 14:07:01,510 [INFO] faster_whisper: Processing audio with duration 00:03.520
+2026-08-21 14:07:01,520 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:04,012 [INFO] jarvis.inputs.voice_input: Transcribed [zh 44%]: 這就不讓大家有個問題
+2026-08-21 14:07:05,090 [INFO] faster_whisper: Processing audio with duration 00:02.048
+2026-08-21 14:07:05,099 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:06,399 [INFO] faster_whisper: Detected language 'en' with probability 0.47
+2026-08-21 14:07:08,905 [INFO] faster_whisper: Detected language 'en' with probability 0.35
+2026-08-21 14:07:09,186 [INFO] faster_whisper: Detected language 'en' with probability 0.21
+2026-08-21 14:07:09,190 [INFO] faster_whisper: Processing audio with duration 00:02.752
+2026-08-21 14:07:09,203 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:13,412 [INFO] faster_whisper: Processing audio with duration 00:04.608
+2026-08-21 14:07:13,436 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:14,445 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:07:14,458 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:16,422 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:07:16,431 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:19,297 [INFO] jarvis.inputs.voice_input: Transcribed [ta 50%]: இன்று ஒன்று குறு வேண்டியாக இருக்கிறது.
+2026-08-21 14:07:19,638 [INFO] faster_whisper: Detected language 'en' with probability 0.17
+2026-08-21 14:07:22,781 [INFO] faster_whisper: Detected language 'ml' with probability 0.17
+2026-08-21 14:07:32,757 [INFO] jarvis.inputs.voice_input: Transcribed [en 15%]: So, that's all.
+2026-08-21 14:07:33,582 [INFO] jarvis.inputs.voice_input: Transcribed [en 92%]: I have taken a screenshot and increased the volume.
+2026-08-21 14:07:33,701 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:07:33,709 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:39,960 [INFO] jarvis.inputs.voice_input: Transcribed [en 68%]: Thank you.
+2026-08-21 14:07:40,360 [INFO] faster_whisper: Detected language 'en' with probability 0.38
+2026-08-21 14:07:43,549 [INFO] faster_whisper: Detected language 'id' with probability 0.41
+2026-08-21 14:07:43,864 [INFO] faster_whisper: Detected language 'en' with probability 0.93
+2026-08-21 14:07:44,332 [INFO] faster_whisper: Detected language 'ml' with probability 0.47
+2026-08-21 14:07:45,095 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:07:45,109 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:48,005 [INFO] faster_whisper: Detected language 'en' with probability 0.63
+2026-08-21 14:07:48,501 [INFO] faster_whisper: Detected language 'en' with probability 0.28
+2026-08-21 14:07:49,126 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:07:49,138 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:52,281 [INFO] faster_whisper: Detected language 'ko' with probability 0.22
+2026-08-21 14:07:53,674 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:07:53,685 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:54,629 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:07:54,635 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:07:55,649 [INFO] faster_whisper: Detected language 'en' with probability 0.20
+2026-08-21 14:07:58,545 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:07:58,545 [INFO] jarvis.tools.speech_tools: speak: YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YIJU, YI
+2026-08-21 14:07:59,060 [INFO] faster_whisper: Detected language 'zh' with probability 0.33
+2026-08-21 14:08:05,814 [INFO] jarvis.inputs.voice_input: Transcribed [en 49%]: What's the name of this?
+2026-08-21 14:08:10,381 [INFO] jarvis.inputs.voice_input: Transcribed [en 99%]: Powered by Google and.
+2026-08-21 14:08:12,688 [INFO] faster_whisper: Detected language 'en' with probability 0.32
+2026-08-21 14:08:14,885 [INFO] faster_whisper: Detected language 'en' with probability 0.80
+2026-08-21 14:08:17,358 [INFO] jarvis.inputs.voice_input: Transcribed [en 67%]: 4. Tamil to English translation accurately free.
+2026-08-21 14:08:17,778 [INFO] jarvis.inputs.voice_input: Transcribed [en 97%]: Online translator, 5.
+2026-08-21 14:08:18,053 [INFO] faster_whisper: Detected language 'en' with probability 0.17
+2026-08-21 14:08:20,546 [INFO] jarvis.inputs.voice_input: Transcribed [en 82%]: That is.
+2026-08-21 14:08:21,022 [INFO] jarvis.inputs.voice_input: Transcribed [en 32%]: I'm going to say it again.
+2026-08-21 14:08:24,023 [INFO] jarvis.inputs.voice_input: Transcribed [ta 67%]: ஏன் இயையும் இயைத்தான் நட்டின் பண்ணாய்?
+2026-08-21 14:08:37,219 [INFO] jarvis.inputs.voice_input: Transcribed [ta 49%]: அது என்ன ஆகிவிட்டுச் செய்கிறார்கள் என்று காத்திருக்கிறேன் என்று பெரிந்துவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவ
+2026-08-21 14:08:43,450 [INFO] faster_whisper: Detected language 'ta' with probability 0.94
+2026-08-21 14:08:49,757 [INFO] faster_whisper: Detected language 'en' with probability 0.78
+2026-08-21 14:08:52,195 [INFO] jarvis.inputs.voice_input: Transcribed [en 47%]: I got the information.
+2026-08-21 14:08:54,691 [INFO] jarvis.inputs.voice_input: Transcribed [en 35%]: You can see it in the video.
+2026-08-21 14:08:55,431 [INFO] faster_whisper: Detected language 'ms' with probability 0.34
+2026-08-21 14:08:55,663 [INFO] faster_whisper: Detected language 'ta' with probability 0.88
+2026-08-21 14:08:55,899 [INFO] faster_whisper: Detected language 'ta' with probability 0.85
+2026-08-21 14:08:56,138 [INFO] faster_whisper: Detected language 'en' with probability 0.33
+2026-08-21 14:08:58,547 [INFO] jarvis.inputs.voice_input: Transcribed [en 17%]: I'm sorry.
+2026-08-21 14:09:01,315 [INFO] jarvis.inputs.voice_input: Transcribed [ml 17%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:09:03,619 [INFO] faster_whisper: Detected language 'en' with probability 0.18
+2026-08-21 14:09:04,637 [INFO] jarvis.inputs.voice_input: Transcribed [id 41%]: Kepur, ini kekopel dengan rasa diri.
+2026-08-21 14:09:05,100 [INFO] jarvis.inputs.voice_input: Transcribed [en 93%]: It's a tragedy.
+2026-08-21 14:09:10,678 [INFO] jarvis.inputs.voice_input: Transcribed [ml 47%]: నార్లులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులులుల
+2026-08-21 14:09:10,938 [INFO] faster_whisper: Detected language 'ta' with probability 0.69
+2026-08-21 14:09:11,372 [INFO] jarvis.inputs.voice_input: Transcribed [en 63%]: After the...
+2026-08-21 14:09:11,872 [INFO] jarvis.inputs.voice_input: Transcribed [en 28%]: I'm not gonna do it.
+2026-08-21 14:09:12,207 [INFO] faster_whisper: Detected language 'en' with probability 0.29
+2026-08-21 14:09:16,464 [INFO] faster_whisper: Detected language 'en' with probability 0.37
+2026-08-21 14:09:16,803 [INFO] faster_whisper: Detected language 'en' with probability 0.14
+2026-08-21 14:09:17,058 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:09:17,064 [INFO] faster_whisper: VAD filter removed 00:00.368 of audio
+2026-08-21 14:09:20,463 [INFO] jarvis.inputs.voice_input: Transcribed [en 20%]: Thank you.
+2026-08-21 14:09:21,109 [INFO] jarvis.inputs.voice_input: Transcribed [zh 33%]: 右,行
+2026-08-21 14:09:22,308 [INFO] faster_whisper: Processing audio with duration 00:02.304
+2026-08-21 14:09:22,318 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:09:24,027 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:09:24,027 [INFO] jarvis.tools.speech_tools: speak: Kita sudah terlambat, ma'am. Bagaimana saya bisa membantu Anda sekarang? Mungkin
+2026-08-21 14:09:31,235 [INFO] jarvis.inputs.voice_input: Transcribed [en 32%]: Goodbye, dear.
+2026-08-21 14:09:31,738 [INFO] jarvis.inputs.voice_input: Transcribed [en 80%]: I'm also glad to hear it.
+2026-08-21 14:09:32,192 [INFO] jarvis.inputs.voice_input: Transcribed [en 17%]: I'm not going to.
+2026-08-21 14:09:40,075 [INFO] jarvis.inputs.voice_input: Transcribed [ta 94%]: ராஜாந்து புடிக்கும் நரசியம் பிடிப்புக்கும் அதித்தான் வந்தேனே புராணே.
+2026-08-21 14:09:47,031 [INFO] jarvis.inputs.voice_input: Transcribed [en 78%]: What's the name of the market?
+2026-08-21 14:09:48,505 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:09:48,510 [INFO] faster_whisper: VAD filter removed 00:00.304 of audio
+2026-08-21 14:09:49,712 [INFO] jarvis.inputs.voice_input: Transcribed [ms 34%]: Ida, itu adalah ni enak.
+2026-08-21 14:09:51,062 [INFO] jarvis.inputs.voice_input: Transcribed [ta 88%]: ஏன் லூச் இது இரண்டு போகத்திற்கு இருக்கிறது லூசே.
+2026-08-21 14:09:52,397 [INFO] jarvis.inputs.voice_input: Transcribed [ta 85%]: நான் தம்பிரச் சென்று கொண்டுகிறேன்.
+2026-08-21 14:09:53,404 [INFO] jarvis.inputs.voice_input: Transcribed [en 33%]: I'm gonna do it up.
+2026-08-21 14:09:54,225 [INFO] jarvis.inputs.voice_input: Transcribed [en 18%]: One, two, three.
+2026-08-21 14:09:55,601 [INFO] jarvis.inputs.voice_input: Transcribed [ta 69%]: ஏ, JARVIS போட்டுவிடா.
+2026-08-21 14:09:56,387 [INFO] jarvis.inputs.voice_input: Transcribed [en 29%]: I'm not gonna say anything.
+2026-08-21 14:09:57,304 [INFO] jarvis.inputs.voice_input: Transcribed [en 37%]: That's our today, guys.
+2026-08-21 14:09:58,040 [INFO] jarvis.inputs.voice_input: Transcribed [en 14%]: Thank you.
+2026-08-21 14:09:58,391 [INFO] faster_whisper: Detected language 'en' with probability 0.31
+2026-08-21 14:10:00,607 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:10:00,613 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:10:00,718 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:10:00,719 [INFO] jarvis.tools.speech_tools: speak: No problem! If you need any assistance in the future, just let me know. For now,
+2026-08-21 14:10:01,521 [INFO] faster_whisper: Detected language 'en' with probability 0.35
+2026-08-21 14:10:05,751 [INFO] faster_whisper: Detected language 'en' with probability 0.31
+2026-08-21 14:10:08,372 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:10:10,879 [INFO] jarvis.inputs.voice_input: Transcribed [en 35%]: I'm gonna end up making this one.
+2026-08-21 14:10:19,338 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:10:19,343 [INFO] faster_whisper: VAD filter removed 00:00.240 of audio
+2026-08-21 14:10:21,889 [INFO] faster_whisper: Detected language 'en' with probability 0.44
+2026-08-21 14:10:28,489 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:10:28,498 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:10:31,979 [INFO] faster_whisper: Detected language 'en' with probability 0.15
+2026-08-21 14:10:32,269 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:10:32,281 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:10:38,711 [INFO] jarvis.inputs.voice_input: Transcribed [en 15%]: I'm not sure what I'm saying.
+2026-08-21 14:10:39,071 [INFO] faster_whisper: Detected language 'en' with probability 0.42
+2026-08-21 14:10:42,568 [INFO] faster_whisper: Processing audio with duration 00:02.112
+2026-08-21 14:10:42,579 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:10:42,582 [INFO] jarvis.inputs.voice_input: Transcribed [en 42%]: Automatically.
+2026-08-21 14:10:45,950 [INFO] faster_whisper: Detected language 'en' with probability 0.66
+2026-08-21 14:10:47,442 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:10:47,467 [INFO] faster_whisper: VAD filter removed 00:01.664 of audio
+2026-08-21 14:10:51,165 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:10:51,166 [INFO] jarvis.tools.speech_tools: speak: ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼
+2026-08-21 14:10:52,213 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:10:52,468 [INFO] jarvis.inputs.voice_input: Transcribed [en 66%]: Thank you.
+2026-08-21 14:10:52,742 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:10:57,181 [INFO] faster_whisper: Processing audio with duration 00:04.608
+2026-08-21 14:10:57,201 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:10:58,842 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:10:58,852 [INFO] faster_whisper: VAD filter removed 00:00.080 of audio
+2026-08-21 14:11:00,699 [INFO] faster_whisper: Processing audio with duration 00:02.048
+2026-08-21 14:11:00,706 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:11:03,371 [INFO] faster_whisper: Detected language 'jw' with probability 0.26
+2026-08-21 14:11:03,830 [INFO] faster_whisper: Processing audio with duration 00:02.368
+2026-08-21 14:11:03,845 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:11:03,984 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:11:03,985 [INFO] jarvis.tools.speech_tools: speak: Sure, let's search for "Planet India." What specifically would you like to know 
+2026-08-21 14:11:05,711 [INFO] faster_whisper: Detected language 'en' with probability 0.54
+2026-08-21 14:11:09,826 [INFO] faster_whisper: Detected language 'jw' with probability 0.19
+2026-08-21 14:11:12,546 [INFO] jarvis.inputs.voice_input: Transcribed [jw 26%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:11:12,775 [INFO] faster_whisper: Detected language 'en' with probability 0.23
+2026-08-21 14:11:22,138 [INFO] jarvis.inputs.voice_input: Transcribed [jw 19%]: ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ �
+2026-08-21 14:11:23,174 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:11:23,179 [INFO] faster_whisper: VAD filter removed 00:00.656 of audio
+2026-08-21 14:11:26,073 [INFO] faster_whisper: Detected language 'en' with probability 0.54
+2026-08-21 14:11:26,849 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:11:26,850 [INFO] jarvis.tools.speech_tools: speak: Hello! How can I assist you today, sir?
+2026-08-21 14:11:37,724 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 14:11:37,730 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:11:40,210 [INFO] faster_whisper: Detected language 'en' with probability 0.20
+2026-08-21 14:11:40,864 [INFO] faster_whisper: Processing audio with duration 00:02.368
+2026-08-21 14:11:40,873 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:11:43,424 [INFO] faster_whisper: Processing audio with duration 00:02.176
+2026-08-21 14:11:43,436 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:11:45,779 [INFO] jarvis.inputs.voice_input: Transcribed [en 20%]: Order, pass, win, order.
+2026-08-21 14:11:48,996 [INFO] faster_whisper: Processing audio with duration 00:05.440
+2026-08-21 14:11:49,020 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:11:49,303 [INFO] faster_whisper: Detected language 'ko' with probability 0.45
+2026-08-21 14:11:49,684 [INFO] faster_whisper: Detected language 'en' with probability 0.69
+2026-08-21 14:11:50,204 [INFO] faster_whisper: Processing audio with duration 00:01.536
+2026-08-21 14:11:50,215 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:11:54,311 [INFO] faster_whisper: Processing audio with duration 00:03.008
+2026-08-21 14:11:54,328 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:11:56,224 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:11:56,237 [INFO] faster_whisper: VAD filter removed 00:00.688 of audio
+2026-08-21 14:11:57,247 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:11:57,258 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:12:00,126 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:12:00,137 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:12:01,345 [INFO] faster_whisper: Detected language 'en' with probability 0.26
+2026-08-21 14:12:03,005 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:12:03,016 [INFO] faster_whisper: VAD filter removed 00:01.600 of audio
+2026-08-21 14:12:06,797 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:12:06,798 [INFO] jarvis.tools.speech_tools: speak: மாடல் ரெடி! உங்கள் தெரிவுக்கான தவறை விளங்கியது என்று நன்றி. எந்த உதவியை வேண்டும்
+2026-08-21 14:12:09,789 [INFO] jarvis.inputs.voice_input: Transcribed [en 69%]: The icon at the corner.
+2026-08-21 14:12:11,926 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:12:15,991 [INFO] faster_whisper: Detected language 'ru' with probability 0.60
+2026-08-21 14:12:16,228 [INFO] faster_whisper: Detected language 'en' with probability 0.29
+2026-08-21 14:12:16,464 [INFO] faster_whisper: Detected language 'ko' with probability 0.33
+2026-08-21 14:12:16,689 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:12:19,039 [INFO] jarvis.inputs.voice_input: Transcribed [en 26%]: Let's go.
+2026-08-21 14:12:19,269 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:12:25,587 [INFO] jarvis.inputs.voice_input: Transcribed [en 36%]: MAMI.
+2026-08-21 14:12:26,033 [INFO] jarvis.inputs.voice_input: Transcribed [ru 60%]: Объект специальный.
+2026-08-21 14:12:26,414 [INFO] jarvis.inputs.voice_input: Transcribed [en 29%]: Thank you.
+2026-08-21 14:12:27,120 [INFO] jarvis.inputs.voice_input: Transcribed [ko 33%]: JARVIS, screenshot, open, close, play, pause, search, Tamil, English.
+2026-08-21 14:12:31,808 [WARNING] jarvis.tools.speech_tools: edge-tts failed (TTS generation timed out after 25 seconds.), falling back to pyttsx3
+2026-08-21 14:12:34,241 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:12:34,250 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:12:37,323 [INFO] faster_whisper: Detected language 'en' with probability 0.44
+2026-08-21 14:12:37,884 [INFO] faster_whisper: Processing audio with duration 00:02.816
+2026-08-21 14:12:37,900 [INFO] faster_whisper: VAD filter removed 00:01.008 of audio
+2026-08-21 14:12:40,313 [INFO] faster_whisper: Processing audio with duration 00:02.816
+2026-08-21 14:12:40,321 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:12:43,123 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:12:43,130 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:12:44,537 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:12:44,548 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:12:48,125 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:12:48,133 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:12:49,144 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:12:49,157 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:12:50,508 [INFO] faster_whisper: Detected language 'en' with probability 0.38
+2026-08-21 14:12:54,057 [INFO] faster_whisper: Detected language 'id' with probability 0.45
+2026-08-21 14:12:55,246 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:12:55,247 [INFO] jarvis.tools.speech_tools: speak: தமிழ் விதித்தது. உங்கள் தெரிவு என்ன இருப்பது? மேலும் உதவியை வேண்டுமா?
+2026-08-21 14:12:55,259 [WARNING] jarvis.tools.speech_tools: edge-tts failed (Cannot connect to host speech.platform.bing.com:443 ssl:<ssl.SSLContext object at 0x000002C00140C500> [getaddrinfo failed]), falling back to pyttsx3
+2026-08-21 14:12:58,817 [INFO] faster_whisper: Detected language 'en' with probability 0.17
+2026-08-21 14:13:01,220 [INFO] faster_whisper: Detected language 'en' with probability 0.47
+2026-08-21 14:13:03,624 [INFO] faster_whisper: Detected language 'en' with probability 0.31
+2026-08-21 14:13:03,891 [INFO] faster_whisper: Detected language 'en' with probability 0.52
+2026-08-21 14:13:05,244 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:13:05,252 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:13:06,648 [INFO] jarvis.inputs.voice_input: Transcribed [en 38%]: Do a lot of loopholes.
+2026-08-21 14:13:09,935 [INFO] jarvis.inputs.voice_input: Transcribed [id 45%]: Galaxialanikin.
+2026-08-21 14:13:11,444 [INFO] faster_whisper: Processing audio with duration 00:02.688
+2026-08-21 14:13:11,467 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:13:13,946 [INFO] faster_whisper: Processing audio with duration 00:02.176
+2026-08-21 14:13:13,959 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:13:15,905 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:13:15,907 [INFO] jarvis.tools.speech_tools: speak: மு匐羲 看来你在输入一些复杂的字符。如果你有任何具体的问题或需要帮助，请告诉我。你需要我做些什么？
+2026-08-21 14:13:15,914 [WARNING] jarvis.tools.speech_tools: edge-tts failed (Cannot connect to host speech.platform.bing.com:443 ssl:<ssl.SSLContext object at 0x000002C00140C500> [getaddrinfo failed]), falling back to pyttsx3
+2026-08-21 14:13:24,837 [INFO] faster_whisper: Processing audio with duration 00:08.384
+2026-08-21 14:13:24,950 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:13:25,560 [INFO] jarvis.inputs.voice_input: Transcribed [en 47%]: You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video. You can see the video.
+2026-08-21 14:13:26,603 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:13:26,612 [INFO] faster_whisper: VAD filter removed 00:00.208 of audio
+2026-08-21 14:13:28,534 [INFO] jarvis.inputs.voice_input: Transcribed [en 31%]: Thank you.
+2026-08-21 14:13:29,863 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:13:29,870 [INFO] faster_whisper: VAD filter removed 00:00.320 of audio
+2026-08-21 14:13:31,238 [INFO] jarvis.inputs.voice_input: Transcribed [en 52%]: Thank you.
+2026-08-21 14:13:31,490 [INFO] faster_whisper: Detected language 'en' with probability 0.48
+2026-08-21 14:13:33,833 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 14:13:33,842 [INFO] faster_whisper: VAD filter removed 00:00.144 of audio
+2026-08-21 14:13:36,398 [INFO] faster_whisper: Detected language 'en' with probability 0.20
+2026-08-21 14:13:38,316 [INFO] faster_whisper: Processing audio with duration 00:02.816
+2026-08-21 14:13:38,340 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:13:39,916 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:13:39,916 [INFO] jarvis.tools.speech_tools: speak: 明白了！如果你有任何问题或需要帮助，随时告诉我。我现在可以帮你做什么？
+2026-08-21 14:13:40,159 [INFO] faster_whisper: Detected language 'en' with probability 0.52
+2026-08-21 14:13:41,034 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:13:42,448 [INFO] faster_whisper: Detected language 'ta' with probability 0.69
+2026-08-21 14:13:44,814 [INFO] faster_whisper: Detected language 'en' with probability 0.50
+2026-08-21 14:13:49,198 [INFO] faster_whisper: Detected language 'en' with probability 0.29
+2026-08-21 14:13:53,734 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:13:53,742 [INFO] faster_whisper: VAD filter removed 00:00.288 of audio
+2026-08-21 14:13:54,020 [INFO] faster_whisper: Detected language 'en' with probability 0.30
+2026-08-21 14:13:57,686 [INFO] jarvis.inputs.voice_input: Transcribed [en 20%]: Thank you.
+2026-08-21 14:13:58,250 [INFO] faster_whisper: Detected language 'zh' with probability 0.29
+2026-08-21 14:14:00,623 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:14:00,624 [INFO] jarvis.tools.speech_tools: speak: -ok, capturing Swallow... Swallow has been captured. What would you like to do n
+2026-08-21 14:14:01,657 [INFO] jarvis.inputs.voice_input: Transcribed [en 52%]: Mind and heart.
+2026-08-21 14:14:04,782 [INFO] jarvis.inputs.voice_input: Transcribed [ta 69%]: இப்போது நான் கண்டிக்கலாமல் இருந்து?
+2026-08-21 14:14:07,201 [INFO] jarvis.inputs.voice_input: Transcribed [en 50%]: Thank you.
+2026-08-21 14:14:09,813 [INFO] jarvis.inputs.voice_input: Transcribed [en 29%]: Thank you.
+2026-08-21 14:14:10,076 [INFO] faster_whisper: Detected language 'en' with probability 0.45
+2026-08-21 14:14:10,495 [INFO] jarvis.inputs.voice_input: Transcribed [en 30%]: Thank you.
+2026-08-21 14:14:16,306 [INFO] jarvis.inputs.voice_input: Transcribed [zh 29%]: 字幕君,請按讚,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享,分享
+2026-08-21 14:14:21,643 [INFO] faster_whisper: Processing audio with duration 00:01.856
+2026-08-21 14:14:21,653 [INFO] faster_whisper: VAD filter removed 00:00.848 of audio
+2026-08-21 14:14:24,595 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:14:24,595 [INFO] jarvis.tools.speech_tools: speak: VL voted... It seems like you've voted for VL. Is there anything else you need a
+2026-08-21 14:14:24,729 [INFO] faster_whisper: Detected language 'en' with probability 0.59
+2026-08-21 14:14:27,063 [INFO] jarvis.inputs.voice_input: Transcribed [en 59%]: Thank you.
+2026-08-21 14:14:39,108 [INFO] faster_whisper: Processing audio with duration 00:02.304
+2026-08-21 14:14:39,116 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:14:41,215 [INFO] faster_whisper: Processing audio with duration 00:02.112
+2026-08-21 14:14:41,228 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:14:42,440 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:14:42,452 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:14:44,360 [INFO] faster_whisper: Processing audio with duration 00:01.856
+2026-08-21 14:14:44,374 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:14:44,948 [INFO] faster_whisper: Detected language 'ta' with probability 0.83
+2026-08-21 14:14:47,427 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:14:47,435 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:14:49,408 [INFO] faster_whisper: Processing audio with duration 00:02.048
+2026-08-21 14:14:49,421 [INFO] faster_whisper: VAD filter removed 00:00.112 of audio
+2026-08-21 14:14:50,756 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:14:50,763 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:14:50,874 [INFO] faster_whisper: Detected language 'jw' with probability 0.15
+2026-08-21 14:14:56,641 [INFO] faster_whisper: Detected language 'en' with probability 0.25
+2026-08-21 14:14:58,687 [INFO] faster_whisper: Processing audio with duration 00:08.320
+2026-08-21 14:14:58,738 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:14:59,619 [INFO] faster_whisper: Detected language 'ta' with probability 0.25
+2026-08-21 14:15:04,130 [INFO] faster_whisper: Processing audio with duration 00:05.312
+2026-08-21 14:15:04,162 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:15:07,001 [INFO] jarvis.inputs.voice_input: Transcribed [ta 83%]: காரத்தியைக் கம்பெணில் இருக்கும் தான்தத்தான்…
+2026-08-21 14:15:07,345 [INFO] faster_whisper: Detected language 'ta' with probability 0.57
+2026-08-21 14:15:13,263 [INFO] faster_whisper: Detected language 'ta' with probability 0.48
+2026-08-21 14:15:15,076 [INFO] faster_whisper: Processing audio with duration 00:10.752
+2026-08-21 14:15:15,145 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:15:16,272 [INFO] faster_whisper: Detected language 'ta' with probability 0.38
+2026-08-21 14:15:18,336 [INFO] faster_whisper: Processing audio with duration 00:03.200
+2026-08-21 14:15:18,359 [INFO] faster_whisper: VAD filter removed 00:00.720 of audio
+2026-08-21 14:15:22,431 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:15:22,432 [INFO] jarvis.tools.speech_tools: speak: ஏன் அந்த தம்பில் ஏங்க வாத்திருக்கிறாய்? இது தமிழில் ஒரு பிரச்னை அல்லது ஒரு தவறவை
+2026-08-21 14:15:25,280 [INFO] jarvis.inputs.voice_input: Transcribed [jw 15%]: ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ � ༼ ༼ ༼ ༼ ༼ � ༼ ༼ � ༼ ༼ ༼ �
+2026-08-21 14:15:27,617 [INFO] jarvis.inputs.voice_input: Transcribed [en 25%]: Thank you.
+2026-08-21 14:15:27,855 [INFO] faster_whisper: Detected language 'ta' with probability 0.88
+2026-08-21 14:15:33,130 [INFO] jarvis.inputs.voice_input: Transcribed [ta 25%]: காத்தியாக நின்று கூறுங்கள் ஏதோ செய்யுங்கள் என்னிடம் செய்து.
+2026-08-21 14:15:37,260 [INFO] faster_whisper: Detected language 'en' with probability 0.41
+2026-08-21 14:15:38,135 [INFO] jarvis.inputs.voice_input: Transcribed [ta 57%]: இப்போது இந்தத்திற்கு இது நடந்தார்.
+2026-08-21 14:15:40,846 [INFO] jarvis.inputs.voice_input: Transcribed [ta 48%]: இது பினால் அந்தப் பலிச்சில்லையா?
+2026-08-21 14:15:41,089 [INFO] faster_whisper: Detected language 'ta' with probability 0.93
+2026-08-21 14:15:41,533 [INFO] faster_whisper: Processing audio with duration 00:00.960
+2026-08-21 14:15:41,539 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:15:46,256 [INFO] jarvis.inputs.voice_input: Transcribed [ta 38%]: காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில் காலையில
+2026-08-21 14:15:46,504 [INFO] faster_whisper: Detected language 'ms' with probability 0.23
+2026-08-21 14:15:51,647 [INFO] faster_whisper: Processing audio with duration 00:08.896
+2026-08-21 14:15:51,703 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:15:54,521 [INFO] jarvis.inputs.voice_input: Transcribed [ta 88%]: நான் தேட்டாசைத்தை கடைக்கவில்லை. தேடியதை கொடுத்திருப்பான். நான் எவ்வளவு பெரிய இது என்று தெரியும் நான் முக்கிய… தேட்டாசைத்தை கடைக்கவில்லையா? தேட்டாசைத்தை முட்டுகடைக்கவில்லை. இந்த மாதிரி…
+2026-08-21 14:15:58,424 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:15:58,435 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:15:58,771 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:15:58,771 [INFO] jarvis.tools.speech_tools: speak: 아, 왜? 아, 왜 이렇게? 看起来你在使用韩语表达疑问。你是在问为什么吗？请告诉我更多细节，我会尽力帮助你。
+2026-08-21 14:16:01,995 [INFO] jarvis.inputs.voice_input: Transcribed [en 41%]: Thank you.
+2026-08-21 14:16:09,186 [INFO] jarvis.inputs.voice_input: Transcribed [ta 93%]: காட்டியிருந்தால் அந்தக் கத்தி வைத்த கத்தியிருந்து பிடிக்குக்கொண்டு இருந்தால் அப்போதும் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மாம் அம்மா
+2026-08-21 14:16:10,198 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:16:11,453 [INFO] faster_whisper: Detected language 'en' with probability 0.32
+2026-08-21 14:16:12,032 [INFO] jarvis.inputs.voice_input: Transcribed [ms 23%]: Kati nak katih, nak kandupur itu.
+2026-08-21 14:16:12,269 [INFO] faster_whisper: Detected language 'ta' with probability 0.96
+2026-08-21 14:16:12,547 [INFO] faster_whisper: Detected language 'pt' with probability 0.39
+2026-08-21 14:16:14,235 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:16:14,241 [INFO] faster_whisper: VAD filter removed 00:01.472 of audio
+2026-08-21 14:16:16,925 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:16:16,932 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:16:29,058 [INFO] jarvis.inputs.voice_input: Transcribed [ta 96%]: கத்தி எடுத்துவார் அது அந்த அவன் தலையில் குடிட்டுக்கொண்டும் பாருக்கும். மிஷினேயே ஒன்றுமில் திரைந்துகொண்டு நாம் பார்த்துக்கொண்டு. அந்த நாடை திரைந்து பேசுகிறார் தான் திரைந்துகொண்டும் என்று பிறகு வைத்திருப்பார்கள். அது மேலும் ச்தாம் மணியில்...
+2026-08-21 14:16:29,181 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:16:29,181 [INFO] jarvis.tools.speech_tools: speak: You're welcome! If you have any other questions or need further assistance, feel
+2026-08-21 14:16:31,445 [INFO] jarvis.inputs.voice_input: Transcribed [pt 39%]: Vê aqui.
+2026-08-21 14:16:31,699 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:16:31,959 [INFO] faster_whisper: Detected language 'nn' with probability 0.25
+2026-08-21 14:16:38,942 [INFO] jarvis.inputs.voice_input: Transcribed [nn 25%]: වවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවවව
+2026-08-21 14:16:39,800 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:16:39,804 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:16:41,461 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 14:16:41,473 [INFO] faster_whisper: VAD filter removed 00:01.920 of audio
+2026-08-21 14:16:44,171 [INFO] faster_whisper: Detected language 'en' with probability 0.40
+2026-08-21 14:16:44,432 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:16:50,550 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:16:50,556 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:16:52,853 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:16:52,863 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:16:55,804 [INFO] faster_whisper: Processing audio with duration 00:02.816
+2026-08-21 14:16:55,824 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:16:56,859 [INFO] faster_whisper: Detected language 'en' with probability 0.51
+2026-08-21 14:16:58,039 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:16:58,045 [INFO] faster_whisper: VAD filter removed 00:00.528 of audio
+2026-08-21 14:16:59,512 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:16:59,521 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:17:00,260 [INFO] faster_whisper: Detected language 'en' with probability 0.48
+2026-08-21 14:17:01,439 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:17:01,455 [INFO] faster_whisper: VAD filter removed 00:00.432 of audio
+2026-08-21 14:17:04,565 [INFO] faster_whisper: Processing audio with duration 00:02.688
+2026-08-21 14:17:04,581 [INFO] faster_whisper: VAD filter removed 00:01.408 of audio
+2026-08-21 14:17:05,592 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:17:05,601 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:17:06,611 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:17:06,619 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:17:08,724 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:17:08,737 [INFO] faster_whisper: VAD filter removed 00:01.280 of audio
+2026-08-21 14:17:09,382 [INFO] faster_whisper: Detected language 'en' with probability 0.45
+2026-08-21 14:17:10,070 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:17:10,071 [INFO] jarvis.tools.speech_tools: speak: இங்கு வருங்கள், இங்கு வைத்து வைத்துவிட்டு வருங்கள். 您在这里，请坐，请随意。请问有什么可以帮助您的吗？
+2026-08-21 14:17:13,994 [INFO] jarvis.inputs.voice_input: Transcribed [en 51%]: Thank you.
+2026-08-21 14:17:18,392 [INFO] faster_whisper: Detected language 'en' with probability 0.41
+2026-08-21 14:17:19,358 [INFO] faster_whisper: Processing audio with duration 00:02.688
+2026-08-21 14:17:19,381 [INFO] faster_whisper: VAD filter removed 00:02.688 of audio
+2026-08-21 14:17:24,477 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:17:24,488 [INFO] faster_whisper: VAD filter removed 00:01.280 of audio
+2026-08-21 14:17:24,691 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:17:28,070 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:17:28,071 [INFO] jarvis.tools.speech_tools: speak: 了解了！您说的是版本号 3.2.1 吗？需要帮助检查或更新这个版本吗？请告诉我更多细节，我会尽力帮助您。
+2026-08-21 14:17:28,109 [INFO] jarvis.inputs.voice_input: Transcribed [en 48%]: Right now.
+2026-08-21 14:17:28,406 [INFO] faster_whisper: Detected language 'en' with probability 0.71
+2026-08-21 14:17:28,645 [INFO] faster_whisper: Detected language 'en' with probability 0.56
+2026-08-21 14:17:28,858 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:17:32,917 [INFO] faster_whisper: Detected language 'en' with probability 0.34
+2026-08-21 14:17:33,148 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:17:35,568 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:17:35,575 [INFO] faster_whisper: VAD filter removed 00:01.600 of audio
+2026-08-21 14:17:37,487 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:17:37,494 [INFO] faster_whisper: VAD filter removed 00:00.352 of audio
+2026-08-21 14:17:40,184 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:17:42,594 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:17:44,848 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:17:44,854 [INFO] faster_whisper: VAD filter removed 00:01.664 of audio
+2026-08-21 14:17:45,115 [INFO] jarvis.inputs.voice_input: Transcribed [en 71%]: Thank you.
+2026-08-21 14:17:48,795 [INFO] jarvis.inputs.voice_input: Transcribed [en 56%]: Thank you.
+2026-08-21 14:17:48,900 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:17:48,900 [INFO] jarvis.tools.speech_tools: speak: 안녕하세요! 어떻게 도와드릴 수 있을까요?
+2026-08-21 14:17:49,525 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:17:50,508 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:17:51,958 [INFO] faster_whisper: Detected language 'en' with probability 0.40
+2026-08-21 14:17:52,232 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:18:05,898 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:18:05,898 [INFO] jarvis.tools.speech_tools: speak: You're welcome! If you have any other questions or need help, feel free to ask.
+2026-08-21 14:18:19,471 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:18:19,476 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:18:21,392 [INFO] faster_whisper: Processing audio with duration 00:01.984
+2026-08-21 14:18:21,402 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:18:23,822 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:18:23,832 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:18:25,650 [INFO] faster_whisper: Detected language 'en' with probability 0.30
+2026-08-21 14:18:28,430 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:18:28,437 [INFO] faster_whisper: VAD filter removed 00:01.344 of audio
+2026-08-21 14:18:28,775 [INFO] faster_whisper: Detected language 'ko' with probability 0.30
+2026-08-21 14:18:31,883 [INFO] faster_whisper: Detected language 'ko' with probability 0.32
+2026-08-21 14:18:33,613 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:18:33,628 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:18:34,832 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:18:34,844 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:18:37,390 [INFO] faster_whisper: Processing audio with duration 00:02.240
+2026-08-21 14:18:37,400 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:18:41,361 [INFO] faster_whisper: Processing audio with duration 00:03.136
+2026-08-21 14:18:41,381 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:18:46,716 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:18:46,717 [INFO] jarvis.tools.speech_tools: speak: ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼ ༼
+2026-08-21 14:18:47,895 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:18:48,622 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:18:50,452 [INFO] jarvis.inputs.voice_input: Transcribed [ko 30%]: 아, 진짜.
+2026-08-21 14:18:50,737 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:18:51,469 [INFO] faster_whisper: Processing audio with duration 00:02.176
+2026-08-21 14:18:51,477 [INFO] faster_whisper: VAD filter removed 00:01.280 of audio
+2026-08-21 14:18:53,529 [INFO] faster_whisper: Detected language 'en' with probability 0.63
+2026-08-21 14:18:53,799 [INFO] faster_whisper: Detected language 'nn' with probability 0.22
+2026-08-21 14:18:54,869 [INFO] faster_whisper: Processing audio with duration 00:02.240
+2026-08-21 14:18:54,877 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:18:56,053 [INFO] faster_whisper: Detected language 'en' with probability 0.23
+2026-08-21 14:18:56,469 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:18:56,475 [INFO] faster_whisper: VAD filter removed 00:00.048 of audio
+2026-08-21 14:19:02,104 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:19:02,119 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:19:04,529 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:19:05,230 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:19:05,238 [INFO] faster_whisper: VAD filter removed 00:01.280 of audio
+2026-08-21 14:19:11,248 [INFO] jarvis.inputs.voice_input: Transcribed [en 63%]: Thank you.
+2026-08-21 14:19:13,230 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:19:13,239 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:19:20,326 [INFO] jarvis.inputs.voice_input: Transcribed [nn 22%]: සිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිසිස
+2026-08-21 14:19:22,830 [INFO] faster_whisper: Processing audio with duration 00:05.504
+2026-08-21 14:19:22,864 [INFO] faster_whisper: VAD filter removed 00:02.752 of audio
+2026-08-21 14:19:23,784 [INFO] faster_whisper: Detected language 'en' with probability 0.26
+2026-08-21 14:19:30,389 [INFO] faster_whisper: Processing audio with duration 00:07.872
+2026-08-21 14:19:30,434 [INFO] faster_whisper: VAD filter removed 00:00.080 of audio
+2026-08-21 14:19:30,661 [INFO] jarvis.inputs.voice_input: Transcribed [en 23%]: JARVIS, screenshot, volume, open, play, pause, search, Tamil, English.
+2026-08-21 14:19:31,019 [INFO] faster_whisper: Detected language 'en' with probability 0.53
+2026-08-21 14:19:36,819 [INFO] faster_whisper: Detected language 'en' with probability 0.33
+2026-08-21 14:19:40,236 [INFO] jarvis.inputs.voice_input: Transcribed [en 36%]: Thank you.
+2026-08-21 14:19:40,571 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:19:45,682 [INFO] faster_whisper: Processing audio with duration 00:15.040
+2026-08-21 14:19:45,773 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:19:46,329 [INFO] faster_whisper: Detected language 'en' with probability 0.74
+2026-08-21 14:19:46,562 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:19:46,563 [INFO] jarvis.tools.speech_tools: speak: அதை சின்னக்காய் இட்டு விட்டு ஜாஜிங்களை விட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்டுவிட்ட
+2026-08-21 14:19:46,671 [INFO] faster_whisper: Detected language 'en' with probability 0.28
+2026-08-21 14:19:49,279 [INFO] faster_whisper: Detected language 'ta' with probability 0.31
+2026-08-21 14:19:55,999 [INFO] jarvis.inputs.voice_input: Transcribed [en 33%]: Thank you.
+2026-08-21 14:19:58,192 [INFO] faster_whisper: Detected language 'ta' with probability 0.98
+2026-08-21 14:19:58,936 [INFO] jarvis.inputs.voice_input: Transcribed [en 74%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:19:59,385 [INFO] jarvis.inputs.voice_input: Transcribed [en 28%]: It's not the middle time.
+2026-08-21 14:20:01,219 [INFO] jarvis.inputs.voice_input: Transcribed [ta 31%]: ஏன் எனக்கு மற்று நான் கூறினாக இருக்கிறது? ஏன்? ரசிம் படு? ரசிம் காட்டேன். இந்த நாடப்பாக?
+2026-08-21 14:20:02,849 [INFO] faster_whisper: Processing audio with duration 00:01.088
+2026-08-21 14:20:02,854 [INFO] faster_whisper: VAD filter removed 00:00.112 of audio
+2026-08-21 14:20:05,600 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:20:05,607 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:20:10,010 [INFO] faster_whisper: Processing audio with duration 00:03.392
+2026-08-21 14:20:10,029 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:20:10,364 [INFO] jarvis.inputs.voice_input: Transcribed [ta 98%]: YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, YG, Y
+2026-08-21 14:20:10,630 [INFO] faster_whisper: Detected language 'en' with probability 0.37
+2026-08-21 14:20:18,082 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:20:18,508 [INFO] faster_whisper: Detected language 'en' with probability 0.68
+2026-08-21 14:20:21,919 [INFO] faster_whisper: Processing audio with duration 00:05.632
+2026-08-21 14:20:21,941 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:20:25,481 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:20:25,482 [INFO] jarvis.tools.speech_tools: speak: Sure, here are the main points: 1. Capture Swallow 2. VL voted 3. Version 3.2.1 
+2026-08-21 14:20:25,499 [INFO] faster_whisper: Processing audio with duration 00:03.712
+2026-08-21 14:20:25,514 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:20:25,680 [INFO] jarvis.inputs.voice_input: Transcribed [en 68%]: No, sorry.
+2026-08-21 14:20:25,940 [INFO] faster_whisper: Detected language 'ta' with probability 0.62
+2026-08-21 14:20:30,121 [INFO] faster_whisper: Detected language 'ta' with probability 0.59
+2026-08-21 14:20:43,655 [INFO] jarvis.inputs.voice_input: Transcribed [ta 59%]: இதுதான் விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு விட்டு
+2026-08-21 14:20:48,702 [INFO] jarvis.inputs.voice_input: Transcribed [ta 62%]: நீ என்னடா இது? விட்டு விட்டு விட்டு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு விடு வ
+2026-08-21 14:20:51,392 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:20:51,401 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:20:54,582 [INFO] faster_whisper: Detected language 'ko' with probability 0.31
+2026-08-21 14:20:55,234 [INFO] faster_whisper: Processing audio with duration 00:03.840
+2026-08-21 14:20:55,253 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:21:00,439 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:21:00,440 [INFO] jarvis.tools.speech_tools: speak: Got it! You passed this along to the chat team. Is there anything else you need 
+2026-08-21 14:21:01,492 [INFO] jarvis.inputs.voice_input: Transcribed [ko 31%]: 빨리 찍어.
+2026-08-21 14:21:01,779 [INFO] faster_whisper: Detected language 'ta' with probability 0.40
+2026-08-21 14:21:05,421 [INFO] jarvis.inputs.voice_input: Transcribed [ta 40%]: இன்னுடைய இந்த ரஸ்மு போட்டுப் பார்க்கும்
+2026-08-21 14:21:28,345 [INFO] faster_whisper: Processing audio with duration 00:02.816
+2026-08-21 14:21:28,388 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:21:28,488 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:21:28,489 [INFO] jarvis.tools.speech_tools: speak: 감사합니다! 다른 도움이 필요하시면 언제든지 알려주세요.
+2026-08-21 14:21:30,135 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:21:31,073 [INFO] faster_whisper: Detected language 'ta' with probability 0.90
+2026-08-21 14:21:33,879 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:21:33,888 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:21:34,853 [INFO] jarvis.inputs.voice_input: Transcribed [ta 90%]: அப்படாவன் உடுப்புன் அரிசிவைப் புடுவார்களா?
+2026-08-21 14:21:37,359 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:21:38,608 [INFO] faster_whisper: Processing audio with duration 00:02.752
+2026-08-21 14:21:38,617 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:21:40,720 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:21:40,728 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:21:43,387 [INFO] faster_whisper: Detected language 'en' with probability 0.26
+2026-08-21 14:21:43,693 [INFO] faster_whisper: Detected language 'en' with probability 0.30
+2026-08-21 14:21:49,170 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:21:49,184 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:21:52,315 [INFO] jarvis.inputs.voice_input: Transcribed [en 26%]: This is the link that you are going to look up in the video right now.
+2026-08-21 14:21:53,521 [INFO] faster_whisper: Processing audio with duration 00:03.136
+2026-08-21 14:21:53,539 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:21:56,721 [INFO] jarvis.inputs.voice_input: Transcribed [en 30%]: Thank you.
+2026-08-21 14:21:57,433 [INFO] faster_whisper: Processing audio with duration 00:02.176
+2026-08-21 14:21:57,457 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:21:59,158 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:21:59,165 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:21:59,954 [INFO] faster_whisper: Detected language 'en' with probability 0.32
+2026-08-21 14:22:00,048 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:22:00,059 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:22:02,292 [INFO] faster_whisper: Processing audio with duration 00:02.432
+2026-08-21 14:22:02,308 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:22:06,194 [INFO] faster_whisper: Detected language 'jw' with probability 0.47
+2026-08-21 14:22:06,957 [INFO] faster_whisper: Processing audio with duration 00:04.736
+2026-08-21 14:22:06,975 [INFO] faster_whisper: VAD filter removed 00:00.128 of audio
+2026-08-21 14:22:07,981 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:22:07,983 [INFO] jarvis.tools.speech_tools: speak: நீயாது பர்வாமல்லை. உங்கள் தெரிவு என்ன இருப்பது? மேலும் உதவியை வேண்டுமா?
+2026-08-21 14:22:12,897 [INFO] faster_whisper: Detected language 'tl' with probability 0.87
+2026-08-21 14:22:13,158 [INFO] faster_whisper: Detected language 'en' with probability 0.30
+2026-08-21 14:22:17,698 [INFO] jarvis.inputs.voice_input: Transcribed [en 32%]: Thank you.
+2026-08-21 14:22:17,968 [INFO] faster_whisper: Detected language 'ja' with probability 0.35
+2026-08-21 14:22:18,234 [INFO] faster_whisper: Detected language 'ta' with probability 0.39
+2026-08-21 14:22:20,381 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 14:22:20,393 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:22:23,391 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:22:23,402 [INFO] faster_whisper: VAD filter removed 00:00.272 of audio
+2026-08-21 14:22:25,242 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 14:22:25,251 [INFO] faster_whisper: VAD filter removed 00:00.176 of audio
+2026-08-21 14:22:28,442 [INFO] faster_whisper: Processing audio with duration 00:03.328
+2026-08-21 14:22:28,465 [INFO] faster_whisper: VAD filter removed 00:00.496 of audio
+2026-08-21 14:22:32,066 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:22:32,067 [INFO] jarvis.tools.speech_tools: speak: Okej, du går till honom där. Har du något specifikt du behöver hjälp med på plat
+2026-08-21 14:22:32,290 [INFO] jarvis.inputs.voice_input: Transcribed [jw 47%]: ڈи ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈi ڈ
+2026-08-21 14:22:32,586 [INFO] faster_whisper: Detected language 'ko' with probability 0.28
+2026-08-21 14:22:36,983 [INFO] jarvis.inputs.voice_input: Transcribed [tl 87%]: Eh, mapatari na.
+2026-08-21 14:22:39,498 [INFO] jarvis.inputs.voice_input: Transcribed [en 30%]: One, two, three, four, one.
+2026-08-21 14:22:48,239 [INFO] faster_whisper: Processing audio with duration 00:03.456
+2026-08-21 14:22:48,254 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:22:48,771 [INFO] jarvis.inputs.voice_input: Transcribed [ta 39%]: என்னுடையும் வேண்டாம்.
+2026-08-21 14:22:49,024 [INFO] faster_whisper: Detected language 'ta' with probability 0.75
+2026-08-21 14:22:49,261 [INFO] faster_whisper: Detected language 'en' with probability 0.37
+2026-08-21 14:22:49,501 [INFO] faster_whisper: Detected language 'en' with probability 0.23
+2026-08-21 14:22:49,747 [INFO] faster_whisper: Detected language 'ta' with probability 0.44
+2026-08-21 14:22:50,627 [INFO] jarvis.inputs.voice_input: Transcribed [ko 28%]: 쯧! 쯧! 아, 좋아! 쯧!
+2026-08-21 14:22:53,039 [INFO] faster_whisper: Processing audio with duration 00:03.584
+2026-08-21 14:22:53,055 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:22:55,607 [INFO] faster_whisper: Processing audio with duration 00:02.688
+2026-08-21 14:22:55,630 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:22:56,820 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:22:56,827 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:22:57,909 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:22:57,915 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:22:58,798 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:22:58,803 [INFO] faster_whisper: VAD filter removed 00:00.336 of audio
+2026-08-21 14:23:01,916 [INFO] faster_whisper: Detected language 'ta' with probability 0.84
+2026-08-21 14:23:03,029 [INFO] faster_whisper: Processing audio with duration 00:02.240
+2026-08-21 14:23:03,039 [INFO] faster_whisper: VAD filter removed 00:00.816 of audio
+2026-08-21 14:23:06,524 [INFO] jarvis.inputs.voice_input: Transcribed [ta 75%]: ஏன் நாப்பது நிதாருக்கிறது?
+2026-08-21 14:23:07,832 [INFO] faster_whisper: Processing audio with duration 00:04.480
+2026-08-21 14:23:07,865 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:23:12,952 [INFO] faster_whisper: Processing audio with duration 00:05.120
+2026-08-21 14:23:12,980 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:23:14,161 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:23:14,168 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:23:18,842 [INFO] faster_whisper: Processing audio with duration 00:04.480
+2026-08-21 14:23:18,878 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:23:20,929 [INFO] jarvis.inputs.voice_input: Transcribed [ta 44%]: இன்னும் ஏன் தாடிக்காடும்?
+2026-08-21 14:23:27,420 [INFO] faster_whisper: Detected language 'ta' with probability 0.49
+2026-08-21 14:23:28,758 [INFO] faster_whisper: Processing audio with duration 00:09.408
+2026-08-21 14:23:28,820 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:23:30,291 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 14:23:30,316 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:23:30,872 [INFO] faster_whisper: Detected language 'ml' with probability 0.52
+2026-08-21 14:23:31,362 [INFO] faster_whisper: Detected language 'ko' with probability 0.29
+2026-08-21 14:23:31,575 [INFO] faster_whisper: Processing audio with duration 00:01.536
+2026-08-21 14:23:31,589 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:23:33,238 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:23:33,243 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:23:34,969 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:23:34,992 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:23:35,991 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:23:36,000 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:23:37,869 [INFO] faster_whisper: Detected language 'ko' with probability 0.44
+2026-08-21 14:23:41,284 [INFO] faster_whisper: Detected language 'en' with probability 0.43
+2026-08-21 14:23:45,326 [INFO] jarvis.inputs.voice_input: Transcribed [ta 84%]: காதியமருக்கு, இது ஒரு மிடிப்புணியாது நான் ஓரு நாப்புத் தோன்றுகிறது.
+2026-08-21 14:23:45,754 [INFO] faster_whisper: Detected language 'ko' with probability 0.28
+2026-08-21 14:23:47,643 [INFO] faster_whisper: Processing audio with duration 00:05.888
+2026-08-21 14:23:47,675 [INFO] faster_whisper: VAD filter removed 00:00.272 of audio
+2026-08-21 14:23:49,091 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:23:49,092 [INFO] jarvis.tools.speech_tools: speak: ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்து? ஏன் செய்
+2026-08-21 14:23:51,112 [INFO] faster_whisper: Detected language 'es' with probability 0.24
+2026-08-21 14:24:00,236 [WARNING] jarvis.tools.speech_tools: edge-tts failed (Cannot connect to host speech.platform.bing.com:443 ssl:<ssl.SSLContext object at 0x000002C00140C500> [The specified network name is no longer available]), falling back to pyttsx3
+2026-08-21 14:24:01,226 [INFO] faster_whisper: Detected language 'ta' with probability 0.85
+2026-08-21 14:24:03,249 [INFO] faster_whisper: Processing audio with duration 00:02.112
+2026-08-21 14:24:03,258 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:04,469 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:24:04,477 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:05,429 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:24:05,434 [INFO] faster_whisper: VAD filter removed 00:00.432 of audio
+2026-08-21 14:24:06,189 [INFO] faster_whisper: Detected language 'en' with probability 0.77
+2026-08-21 14:24:08,693 [INFO] faster_whisper: Detected language 'ta' with probability 0.98
+2026-08-21 14:24:09,329 [INFO] faster_whisper: Processing audio with duration 00:02.944
+2026-08-21 14:24:09,343 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:15,859 [INFO] faster_whisper: Processing audio with duration 00:02.752
+2026-08-21 14:24:15,871 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:21,128 [INFO] jarvis.inputs.voice_input: Transcribed [ta 49%]: ஏன் இப்பால முன்றாறி இருந்து சொன்னால்
+2026-08-21 14:24:21,598 [INFO] faster_whisper: Detected language 'ta' with probability 0.98
+2026-08-21 14:24:21,949 [INFO] faster_whisper: Processing audio with duration 00:02.112
+2026-08-21 14:24:21,970 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:24,512 [INFO] faster_whisper: Processing audio with duration 00:02.240
+2026-08-21 14:24:24,533 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:26,065 [INFO] faster_whisper: Detected language 'ta' with probability 0.78
+2026-08-21 14:24:27,785 [INFO] jarvis.inputs.voice_input: Transcribed [ml 52%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:24:28,398 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:24:28,403 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:28,741 [INFO] jarvis.inputs.voice_input: Transcribed [ko 29%]: 문화력.
+2026-08-21 14:24:29,436 [INFO] faster_whisper: Detected language 'en' with probability 0.28
+2026-08-21 14:24:30,096 [INFO] faster_whisper: Detected language 'en' with probability 0.32
+2026-08-21 14:24:37,998 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:24:38,006 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:38,305 [INFO] faster_whisper: Detected language 'en' with probability 0.38
+2026-08-21 14:24:40,049 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:24:40,054 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:24:44,853 [INFO] faster_whisper: Detected language 'en' with probability 0.44
+2026-08-21 14:24:45,362 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 14:24:45,374 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:24:46,708 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:24:46,713 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:24:48,382 [INFO] jarvis.inputs.voice_input: Transcribed [ko 44%]: 한 번 더.
+2026-08-21 14:24:55,728 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:24:55,729 [INFO] jarvis.tools.speech_tools: speak: 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아, 아,
+2026-08-21 14:24:56,520 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:24:58,009 [INFO] faster_whisper: Detected language 'ta' with probability 0.95
+2026-08-21 14:24:58,902 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:24:58,909 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:25:03,702 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:25:03,708 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:04,770 [INFO] jarvis.inputs.voice_input: Transcribed [es 24%]: Y el camateará.
+2026-08-21 14:25:05,883 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:25:05,889 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:25:15,097 [INFO] faster_whisper: Processing audio with duration 00:03.776
+2026-08-21 14:25:15,116 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:17,322 [INFO] jarvis.inputs.voice_input: Transcribed [ta 85%]: ஏதோ மாதிரியாக இப்போது ஏதாவது அடிப்போது, சும்மாக இதில் கொடுத்து டாவழ்ட்டு வைத்தேன்.
+2026-08-21 14:25:17,622 [INFO] faster_whisper: Detected language 'ta' with probability 0.57
+2026-08-21 14:25:25,264 [INFO] faster_whisper: Detected language 'en' with probability 0.27
+2026-08-21 14:25:25,585 [INFO] faster_whisper: Detected language 'en' with probability 0.37
+2026-08-21 14:25:26,046 [INFO] faster_whisper: Processing audio with duration 00:01.856
+2026-08-21 14:25:26,057 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:27,963 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:25:27,969 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:29,625 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:25:29,632 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:33,595 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:25:33,614 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:34,380 [INFO] jarvis.inputs.voice_input: Transcribed [en 77%]: Time to do it.
+2026-08-21 14:25:35,325 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:25:35,334 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:36,073 [INFO] jarvis.inputs.voice_input: Transcribed [ta 98%]: யார் ஏற் டிக்கும் என்று கேட்கிறேன் போந்தாசு நான்
+2026-08-21 14:25:36,412 [INFO] faster_whisper: Detected language 'ta' with probability 0.98
+2026-08-21 14:25:36,788 [INFO] faster_whisper: Detected language 'es' with probability 0.62
+2026-08-21 14:25:38,643 [INFO] faster_whisper: Processing audio with duration 00:02.176
+2026-08-21 14:25:38,651 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:41,593 [INFO] faster_whisper: Processing audio with duration 00:02.624
+2026-08-21 14:25:41,609 [INFO] faster_whisper: VAD filter removed 00:00.032 of audio
+2026-08-21 14:25:44,025 [INFO] faster_whisper: Processing audio with duration 00:01.536
+2026-08-21 14:25:44,035 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:25:46,452 [INFO] jarvis.inputs.voice_input: Transcribed [ta 98%]: புரிதாக, கண்டன்டலான் இந்த ரிக்ப்ப் பேச் சென்று கொடுத்தாய். உங்கள் எந்த ச்டாம் போட்டதை இவ்வளவு வா. பிந்த ரெசிமை கொடுத்துக்கொள்ளாப் போனேன். நாம் பின் ரெசிமை கொடுதேன்.
+2026-08-21 14:25:46,498 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:25:46,499 [INFO] jarvis.tools.speech_tools: speak: நான் இன்னால் இங்கு நான் பிட்சுப் போல்லாம் என்னை நிச்சயம் மனிப்போலம் போல்லாம். இத
+2026-08-21 14:25:46,692 [INFO] faster_whisper: Detected language 'en' with probability 0.20
+2026-08-21 14:25:48,955 [INFO] faster_whisper: Detected language 'pt' with probability 0.53
+2026-08-21 14:25:51,606 [INFO] jarvis.inputs.voice_input: Transcribed [ta 78%]: அடுத்து கட்ட ராலிங்கும்
+2026-08-21 14:25:51,865 [INFO] faster_whisper: Detected language 'en' with probability 0.20
+2026-08-21 14:25:52,250 [INFO] jarvis.inputs.voice_input: Transcribed [en 28%]: Lallaa!
+2026-08-21 14:25:52,587 [INFO] jarvis.inputs.voice_input: Transcribed [en 32%]: Go.
+2026-08-21 14:25:56,728 [INFO] faster_whisper: Detected language 'ta' with probability 0.14
+2026-08-21 14:25:57,138 [INFO] jarvis.inputs.voice_input: Transcribed [en 38%]: I'm glad to live.
+2026-08-21 14:25:57,368 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:26:02,831 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:26:02,837 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:26:04,112 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:26:04,118 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:26:05,721 [INFO] jarvis.inputs.voice_input: Transcribed [en 44%]: Yeah.
+2026-08-21 14:26:08,059 [INFO] faster_whisper: Detected language 'ta' with probability 0.63
+2026-08-21 14:26:08,461 [INFO] faster_whisper: Processing audio with duration 00:03.200
+2026-08-21 14:26:08,474 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:26:10,726 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:26:12,622 [INFO] faster_whisper: Processing audio with duration 00:03.904
+2026-08-21 14:26:12,645 [INFO] faster_whisper: VAD filter removed 00:00.048 of audio
+2026-08-21 14:26:13,822 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:26:13,823 [INFO] jarvis.tools.speech_tools: speak: 好的，下单本期我们再来看。请告诉我具体需要查看什么内容或执行什么操作，我会尽力帮助您。
+2026-08-21 14:26:14,663 [WARNING] jarvis.tools.speech_tools: edge-tts failed (No audio was received. Please verify that your parameters are correct.), falling back to pyttsx3
+2026-08-21 14:26:15,909 [INFO] faster_whisper: Processing audio with duration 00:00.960
+2026-08-21 14:26:15,913 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:26:18,020 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:26:18,029 [INFO] faster_whisper: VAD filter removed 00:01.408 of audio
+2026-08-21 14:26:21,227 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:26:21,228 [INFO] jarvis.tools.speech_tools: speak: You're welcome! If you have any more questions or need further assistance, feel 
+2026-08-21 14:26:22,312 [INFO] jarvis.inputs.voice_input: Transcribed [ta 95%]: என்ன நான் உனக்குப் பிறகு நீங்க ஏன் நான் மாட்டு ஜார்ஜிக்க்கொடுக்கிறான்? ஏ!
+2026-08-21 14:26:24,516 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:26:28,710 [INFO] faster_whisper: Detected language 'ta' with probability 0.52
+2026-08-21 14:26:30,878 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:26:33,335 [INFO] faster_whisper: Detected language 'hi' with probability 0.65
+2026-08-21 14:26:33,958 [INFO] faster_whisper: Processing audio with duration 00:02.880
+2026-08-21 14:26:33,978 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:26:34,751 [INFO] jarvis.inputs.voice_input: Transcribed [ta 57%]: தலை உகாது ரெடிக்கும் வழுகிறது.
+2026-08-21 14:26:36,006 [INFO] faster_whisper: Processing audio with duration 00:02.432
+2026-08-21 14:26:36,018 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:26:38,030 [INFO] jarvis.inputs.voice_input: Transcribed [en 27%]: Hello.
+2026-08-21 14:26:39,266 [INFO] faster_whisper: Processing audio with duration 00:02.048
+2026-08-21 14:26:39,281 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:26:41,743 [INFO] faster_whisper: Detected language 'en' with probability 0.43
+2026-08-21 14:26:44,759 [INFO] faster_whisper: Detected language 'ta' with probability 0.68
+2026-08-21 14:26:45,121 [INFO] faster_whisper: Detected language 'ru' with probability 0.35
+2026-08-21 14:26:50,548 [INFO] faster_whisper: Detected language 'ta' with probability 0.51
+2026-08-21 14:26:50,657 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 14:26:50,666 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:26:52,526 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:26:52,527 [INFO] jarvis.tools.speech_tools: speak: Sure, I'll take a screenshot, adjust the volume, open a browser, and perform a s
+2026-08-21 14:26:53,229 [INFO] faster_whisper: Detected language 'ta' with probability 0.33
+2026-08-21 14:26:57,160 [INFO] jarvis.inputs.voice_input: Transcribed [ta 98%]: சார் எடுத்து வரலாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்லாமல்
+2026-08-21 14:26:59,512 [INFO] jarvis.inputs.voice_input: Transcribed [es 62%]: En palares, encima por tu parte.
+2026-08-21 14:27:01,681 [INFO] faster_whisper: Detected language 'ta' with probability 0.95
+2026-08-21 14:27:01,909 [INFO] faster_whisper: Detected language 'ta' with probability 0.95
+2026-08-21 14:27:02,121 [INFO] faster_whisper: Detected language 'ar' with probability 0.22
+2026-08-21 14:27:02,490 [INFO] jarvis.inputs.voice_input: Transcribed [en 20%]: You didn't have to.
+2026-08-21 14:27:04,719 [INFO] jarvis.inputs.voice_input: Transcribed [pt 53%]: Quer ver?
+2026-08-21 14:27:05,028 [INFO] jarvis.inputs.voice_input: Transcribed [en 20%]: Hello.
+2026-08-21 14:27:12,457 [INFO] jarvis.inputs.voice_input: Transcribed [ta 14%]: இங்கே கொடுத்து பாப்பா.
+2026-08-21 14:27:14,210 [INFO] faster_whisper: Detected language 'en' with probability 0.39
+2026-08-21 14:27:15,967 [INFO] faster_whisper: Detected language 'ta' with probability 0.57
+2026-08-21 14:27:20,398 [INFO] jarvis.inputs.voice_input: Transcribed [ta 63%]: JARVIS, screenshot, volume, browser, open, play, pause, search, Tamil, English.
+2026-08-21 14:27:20,627 [INFO] faster_whisper: Detected language 'ta' with probability 0.99
+2026-08-21 14:32:11,176 [INFO] main: JARVIS starting — mode=all, model=qwen2.5:7b
+2026-08-21 14:32:11,177 [INFO] jarvis.orchestrator: Orchestrator ready — model=qwen2.5:7b, tools=detect_object, select_object, zoom_object, analyze_object, move_object, rotate_object, duplicate_object, delete_object, open_application, execute_command, read_file, take_screenshot, control_volume, control_media, show_desktop, search_web, speak
+2026-08-21 14:32:11,817 [INFO] jarvis.inputs.gesture_input: GestureWatcher started.
+2026-08-21 14:32:11,821 [INFO] jarvis.inputs.text_input: Text input ready. Type your message and press Enter.
+2026-08-21 14:32:16,594 [INFO] jarvis.inputs.voice_input: Loading speech recognition model (small, cpu)...
+2026-08-21 14:32:17,941 [INFO] jarvis.inputs.voice_input: Microphone calibrated: noise_floor=0.0048, speech_threshold=0.0120
+2026-08-21 14:32:19,294 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-08-21 14:32:20,534 [INFO] jarvis.inputs.voice_input: Speech recognition model ready.
+2026-08-21 14:32:20,941 [INFO] faster_whisper: Processing audio with duration 00:02.624
+2026-08-21 14:32:21,083 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:32:22,162 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:32:22,169 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:32:23,783 [INFO] faster_whisper: Detected language 'es' with probability 0.41
+2026-08-21 14:32:23,939 [INFO] faster_whisper: Detected language 'en' with probability 0.61
+2026-08-21 14:32:26,062 [INFO] faster_whisper: Processing audio with duration 00:03.200
+2026-08-21 14:32:26,072 [INFO] faster_whisper: VAD filter removed 00:00.720 of audio
+2026-08-21 14:32:27,152 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:32:27,158 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:32:28,420 [INFO] jarvis.inputs.voice_input: Transcribed [en 61%]: Thank you.
+2026-08-21 14:32:29,392 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:32:29,396 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:32:29,864 [INFO] faster_whisper: Detected language 'en' with probability 0.85
+2026-08-21 14:32:29,984 [INFO] jarvis.inputs.gesture_input: Gesture watcher camera open at index 0.
+2026-08-21 14:32:31,603 [INFO] faster_whisper: Detected language 'en' with probability 0.17
+2026-08-21 14:32:33,072 [INFO] faster_whisper: Detected language 'en' with probability 0.34
+2026-08-21 14:32:34,518 [INFO] jarvis.inputs.voice_input: Transcribed [en 85%]: That might be good.
+2026-08-21 14:32:40,061 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:32:40,065 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:32:41,554 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 14:32:41,561 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:32:41,583 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:32:43,139 [INFO] faster_whisper: Detected language 'en' with probability 0.31
+2026-08-21 14:32:43,854 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:32:43,859 [INFO] faster_whisper: VAD filter removed 00:01.280 of audio
+2026-08-21 14:32:46,736 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:32:46,742 [INFO] faster_whisper: VAD filter removed 00:00.784 of audio
+2026-08-21 14:32:48,205 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:32:48,213 [INFO] faster_whisper: VAD filter removed 00:01.472 of audio
+2026-08-21 14:32:50,195 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 14:32:50,204 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:32:51,081 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:32:55,357 [INFO] faster_whisper: Detected language 'en' with probability 0.72
+2026-08-21 14:32:55,543 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:32:55,717 [INFO] faster_whisper: Detected language 'en' with probability 0.77
+2026-08-21 14:32:57,484 [INFO] faster_whisper: Processing audio with duration 00:07.104
+2026-08-21 14:32:57,513 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:32:59,030 [INFO] jarvis.inputs.voice_input: Transcribed [en 72%]: Thank you.
+2026-08-21 14:32:59,914 [INFO] faster_whisper: Processing audio with duration 00:01.792
+2026-08-21 14:32:59,920 [INFO] faster_whisper: VAD filter removed 00:00.160 of audio
+2026-08-21 14:33:00,819 [INFO] jarvis.inputs.voice_input: Transcribed [en 77%]: Number eight, give up.
+2026-08-21 14:33:02,437 [INFO] faster_whisper: Detected language 'jw' with probability 0.31
+2026-08-21 14:33:02,629 [INFO] faster_whisper: Detected language 'en' with probability 0.34
+2026-08-21 14:33:04,718 [INFO] faster_whisper: Processing audio with duration 00:04.416
+2026-08-21 14:33:04,760 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:33:06,805 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:33:06,807 [INFO] jarvis.tools.speech_tools: speak: You're welcome! How can I assist you further?
+2026-08-21 14:33:09,451 [INFO] faster_whisper: Detected language 'ta' with probability 0.64
+2026-08-21 14:33:11,772 [INFO] jarvis.inputs.voice_input: Transcribed [ta 64%]: சிவிரப்பேலையில் மீண்புட்டு ஒரு நாம் மீண்புகிறேன்.
+2026-08-21 14:33:19,792 [INFO] faster_whisper: Processing audio with duration 00:01.024
+2026-08-21 14:33:19,802 [INFO] faster_whisper: VAD filter removed 00:01.024 of audio
+2026-08-21 14:33:22,144 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:33:22,145 [INFO] jarvis.tools.speech_tools: speak: Of course! Do you need help with a specific task or have a question in mind?
+2026-08-21 14:33:22,652 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:33:43,819 [WARNING] jarvis.tools.speech_tools: edge-tts failed (Connection timeout to host wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=66208bc21f9641f9829c5aa9cfc77bce&Sec-MS-GEC=7AC6349849E15DC987721FF05A439CADC56E54CBDD55D9F0FD931FD4FA776BDB&Sec-MS-GEC-Version=1-143.0.3650.75), falling back to pyttsx3
+2026-08-21 14:33:43,966 [INFO] comtypes.client._code_cache: Imported existing <module 'comtypes.gen' from 'D:\\Jarvis\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-08-21 14:33:43,967 [INFO] comtypes.client._code_cache: Using writeable comtypes cache directory: 'D:\Jarvis\.venv\Lib\site-packages\comtypes\gen'
+2026-08-21 14:33:48,875 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.85)
+2026-08-21 14:33:50,826 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.82)
+2026-08-21 14:33:51,835 [INFO] faster_whisper: Processing audio with duration 00:00.960
+2026-08-21 14:33:51,838 [INFO] faster_whisper: VAD filter removed 00:00.960 of audio
+2026-08-21 14:33:53,051 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:33:53,090 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:33:53,235 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:33:53,236 [INFO] jarvis.tools.speech_tools: speak: You're welcome! If you need any assistance, just let me know.
+2026-08-21 14:33:54,636 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.81)
+2026-08-21 14:33:55,454 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:33:55,618 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:33:57,482 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Closed_Fist (confidence: 0.87)
+2026-08-21 14:34:03,184 [INFO] faster_whisper: Processing audio with duration 00:01.472
+2026-08-21 14:34:03,199 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:34:04,090 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:34:04,091 [INFO] jarvis.tools.speech_tools: speak: I understand. Is there anything else you'd like to do or discuss?
+2026-08-21 14:34:05,195 [INFO] faster_whisper: Detected language 'en' with probability 0.66
+2026-08-21 14:34:06,774 [INFO] jarvis.inputs.voice_input: Transcribed [en 66%]: Hey, JARVIS.
+2026-08-21 14:34:18,385 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 14:34:18,397 [INFO] faster_whisper: VAD filter removed 00:00.336 of audio
+2026-08-21 14:34:22,003 [INFO] faster_whisper: Detected language 'es' with probability 0.40
+2026-08-21 14:34:24,218 [INFO] faster_whisper: Processing audio with duration 00:04.096
+2026-08-21 14:34:24,282 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:34:25,134 [INFO] faster_whisper: Processing audio with duration 00:01.024
+2026-08-21 14:34:25,286 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:34:28,056 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:34:28,085 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:34:30,364 [INFO] faster_whisper: Processing audio with duration 00:02.112
+2026-08-21 14:34:30,373 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:34:33,364 [INFO] faster_whisper: Processing audio with duration 00:01.664
+2026-08-21 14:34:33,373 [INFO] faster_whisper: VAD filter removed 00:00.816 of audio
+2026-08-21 14:34:36,505 [INFO] faster_whisper: Processing audio with duration 00:01.600
+2026-08-21 14:34:36,515 [INFO] faster_whisper: VAD filter removed 00:00.144 of audio
+2026-08-21 14:34:39,870 [INFO] faster_whisper: Detected language 'en' with probability 0.61
+2026-08-21 14:34:40,187 [INFO] faster_whisper: Detected language 'en' with probability 0.40
+2026-08-21 14:34:40,736 [INFO] faster_whisper: Processing audio with duration 00:03.840
+2026-08-21 14:34:40,760 [INFO] faster_whisper: VAD filter removed 00:00.048 of audio
+2026-08-21 14:34:43,034 [INFO] faster_whisper: Processing audio with duration 00:02.048
+2026-08-21 14:34:43,043 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:34:43,579 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:34:43,580 [INFO] jarvis.tools.speech_tools: speak: நாம் சிவிரப்பேலையில் மீண்புட்டு ஒரு மீண்புகிறேன். என்னை மீண்புதலில் உதவும் விபரங
+2026-08-21 14:34:44,718 [INFO] faster_whisper: Detected language 'en' with probability 0.37
+2026-08-21 14:34:44,883 [INFO] faster_whisper: Detected language 'en' with probability 0.31
+2026-08-21 14:34:49,156 [INFO] faster_whisper: Detected language 'en' with probability 0.37
+2026-08-21 14:34:50,641 [INFO] faster_whisper: Detected language 'en' with probability 0.40
+2026-08-21 14:34:53,784 [INFO] jarvis.inputs.voice_input: Transcribed [en 61%]: Just do the voice and then we'll do it. Thank you. You're just listening now.
+2026-08-21 14:34:54,338 [INFO] faster_whisper: Detected language 'ta' with probability 0.72
+2026-08-21 14:34:56,392 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:34:56,394 [INFO] jarvis.tools.speech_tools: speak: Hello! How can I assist you today?
+2026-08-21 14:34:56,707 [INFO] faster_whisper: Detected language 'en' with probability 0.65
+2026-08-21 14:35:02,402 [INFO] jarvis.inputs.voice_input: Transcribed [ta 72%]: இது வாழ்ந்தில் மின்னில் ஏது செய்து?
+2026-08-21 14:35:02,704 [INFO] jarvis.inputs.voice_input: Transcribed [en 65%]: Hey Jarvis, citizen.
+2026-08-21 14:35:07,976 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:35:07,984 [INFO] faster_whisper: VAD filter removed 00:00.432 of audio
+2026-08-21 14:35:09,827 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 14:35:09,853 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:35:11,617 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:35:11,619 [INFO] jarvis.tools.speech_tools: speak: Understood. I'll be ready to assist once you're ready to give me instructions or
+2026-08-21 14:35:12,526 [INFO] faster_whisper: Detected language 'hi' with probability 0.28
+2026-08-21 14:35:12,688 [INFO] faster_whisper: Detected language 'en' with probability 0.19
+2026-08-21 14:35:27,638 [INFO] faster_whisper: Processing audio with duration 00:01.728
+2026-08-21 14:35:27,645 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:35:30,576 [INFO] faster_whisper: Processing audio with duration 00:01.280
+2026-08-21 14:35:30,587 [INFO] faster_whisper: VAD filter removed 00:00.096 of audio
+2026-08-21 14:35:30,594 [INFO] faster_whisper: Detected language 'en' with probability 0.63
+2026-08-21 14:35:32,234 [INFO] faster_whisper: Processing audio with duration 00:01.408
+2026-08-21 14:35:32,240 [INFO] faster_whisper: VAD filter removed 00:00.480 of audio
+2026-08-21 14:35:36,276 [INFO] faster_whisper: Processing audio with duration 00:04.416
+2026-08-21 14:35:36,293 [INFO] faster_whisper: VAD filter removed 00:00.496 of audio
+2026-08-21 14:35:37,296 [INFO] faster_whisper: Processing audio with duration 00:01.216
+2026-08-21 14:35:37,312 [INFO] faster_whisper: VAD filter removed 00:01.216 of audio
+2026-08-21 14:35:37,992 [INFO] faster_whisper: Detected language 'en' with probability 0.43
+2026-08-21 14:35:38,560 [INFO] jarvis.inputs.voice_input: Transcribed [en 63%]: Tap the program.
+2026-08-21 14:35:39,987 [INFO] faster_whisper: Processing audio with duration 00:02.304
+2026-08-21 14:35:40,006 [INFO] faster_whisper: VAD filter removed 00:00.192 of audio
+2026-08-21 14:35:43,294 [INFO] faster_whisper: Detected language 'en' with probability 0.57
+2026-08-21 14:35:46,128 [INFO] faster_whisper: Processing audio with duration 00:04.672
+2026-08-21 14:35:46,168 [INFO] faster_whisper: VAD filter removed 00:03.552 of audio
+2026-08-21 14:35:47,960 [INFO] faster_whisper: Detected language 'en' with probability 0.39
+2026-08-21 14:35:48,233 [INFO] faster_whisper: Detected language 'en' with probability 0.36
+2026-08-21 14:35:48,874 [INFO] faster_whisper: Processing audio with duration 00:02.496
+2026-08-21 14:35:48,886 [INFO] faster_whisper: VAD filter removed 00:00.960 of audio
+2026-08-21 14:35:50,674 [INFO] faster_whisper: Processing audio with duration 00:01.344
+2026-08-21 14:35:50,680 [INFO] faster_whisper: VAD filter removed 00:00.016 of audio
+2026-08-21 14:35:51,149 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:35:51,150 [INFO] jarvis.tools.speech_tools: speak: இது வாழ்ந்தில் மின்னில் சில திட்டங்துகளும் செய்து வருகிறேன். நீங்கள் என்னை எப்பட
+2026-08-21 14:35:52,492 [INFO] faster_whisper: Detected language 'en' with probability 0.76
+2026-08-21 14:35:56,810 [INFO] faster_whisper: Detected language 'en' with probability 0.39
+2026-08-21 14:35:58,675 [INFO] faster_whisper: Detected language 'en' with probability 0.37
+2026-08-21 14:35:58,826 [INFO] faster_whisper: Detected language 'en' with probability 0.48
+2026-08-21 14:36:00,412 [INFO] jarvis.inputs.voice_input: Transcribed [en 76%]: JARVIS, stop the program.
+2026-08-21 14:36:05,123 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:36:05,125 [INFO] jarvis.tools.speech_tools: speak: Hello, citizen! How can I assist you today?
+2026-08-21 14:36:21,539 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:36:21,540 [INFO] jarvis.tools.speech_tools: speak: I'm ready to assist. Please provide more details or specify what action you'd li
+2026-08-21 14:36:35,852 [INFO] httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-08-21 14:36:35,853 [INFO] jarvis.tools.speech_tools: speak: The program has been stopped. Is there anything else you need help with?
+2026-08-21 14:36:35,962 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Victory (confidence: 0.80)
+2026-08-21 14:36:37,856 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Pointing_Up (confidence: 0.83)
+2026-08-21 14:36:39,095 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Victory (confidence: 0.81)
+2026-08-21 14:36:42,235 [INFO] jarvis.inputs.gesture_input: Hand gesture detected: Victory (confidence: 0.80)
+2026-08-21 14:36:52,425 [INFO] faster_whisper: Processing audio with duration 00:04.288
+2026-08-21 14:36:52,434 [INFO] faster_whisper: VAD filter removed 00:00.080 of audio
+2026-08-21 14:36:53,914 [INFO] faster_whisper: Detected language 'hi' with probability 0.30
+2026-08-21 14:36:54,917 [INFO] faster_whisper: Processing audio with duration 00:02.496
+2026-08-21 14:36:54,926 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:36:57,606 [INFO] faster_whisper: Processing audio with duration 00:02.112
+2026-08-21 14:36:57,616 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:36:59,716 [INFO] faster_whisper: Processing audio with duration 00:01.856
+2026-08-21 14:36:59,725 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:37:00,490 [INFO] faster_whisper: Detected language 'ta' with probability 0.76
+2026-08-21 14:37:01,504 [INFO] faster_whisper: Processing audio with duration 00:01.920
+2026-08-21 14:37:01,514 [INFO] faster_whisper: VAD filter removed 00:00.000 of audio
+2026-08-21 14:37:01,956 [INFO] main: JARVIS shutdown complete.

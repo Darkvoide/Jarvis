@@ -15,25 +15,22 @@ ollama:
 stt:
   # "continuous" (hands-free auto-detect) or "ptt" (hold key to speak)
   mode: "continuous"
-  # faster-whisper model size — ACCURACY RANKED:
-  #   tiny (fastest, least accurate) | base | small (best balance) | medium | large-v3 (most accurate)
-  # ↑ Upgrade to "small" for better Tamil+English accuracy on CPU. "base" if speed is priority.
+  # faster-whisper model size: tiny | base | small | medium
   model_size: "small"
   device: "cpu"          # "cpu" or "cuda"
   compute_type: "int8"   # "int8" (fastest cpu) | "float16" (needs cuda) | "float32"
-  # FIX: Pin language to "ta" for Tamil-dominant speech, or "en" for English-only
-  # "null" makes Whisper guess — causing hi/ta/en confusion (seen in logs)
-  # For Tanglish (Tamil+English mix), set language to null but use initial_prompt below
+  # Set language to "ta" for Tamil, "en" for English, or null for auto-detection
   language: null
-  # initial_prompt nudges Whisper toward Tamil+English and your vocabulary:
-  initial_prompt: "JARVIS, screenshot, volume, browser, open, close, play, pause."
+  # initial_prompt nudges Whisper toward desired vocabulary and Tanglish / Tamil / English context:
+  initial_prompt: "JARVIS, screenshot, volume, browser, open, close, play, pause, search, Tamil, English."
   vad_filter: true
-  # VAD aggressiveness — silenceMs before cutting off (was 250ms, too aggressive for short words)
   vad_min_silence_ms: 400
-  # Minimum language detection probability before accepting transcript (0.0=off, 0.5=recommended)
-  min_language_prob: 0.40
-  # Reject transcripts that are just noise artifacts
-  no_speech_threshold: 0.6
+  # Raise min_language_prob to suppress background audio false triggers.
+  # 0.45 = reject transcripts where Whisper isn't confident about the language
+  # (background TV/speakers produce low-confidence language detections like 'tr 46%', 'ta 32%')
+  min_language_prob: 0.45
+  # Reject audio that Whisper thinks has no real speech content
+  no_speech_threshold: 0.55
 
 tts:
   # "edge-tts" – Microsoft Edge Neural TTS (Natural Tamil & English voices)

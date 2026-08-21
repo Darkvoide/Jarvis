@@ -66,14 +66,19 @@ def _make_reply_handler(orch: Orchestrator) -> callable:
             response = orch.handle(user_input)
             print(f"🤖 JARVIS: {response}\n")
 
-            # Auto-speak response if TTS is available
-            try:
-                from jarvis.tools.speech_tools import speak
-                speak(response)
-            except Exception:
-                pass
+            # Guaranteed voice output for every conversation turn.
+            # Only auto-speak if the LLM did NOT already call the speak() tool
+            # (tracked by orchestrator._spoke_this_turn) to avoid duplicate speech.
+            already_spoken = getattr(orch, "_spoke_this_turn", False)
+            if not already_spoken:
+                try:
+                    from jarvis.tools.speech_tools import speak
+                    speak(response)
+                except Exception:
+                    pass
 
     return handle
+
 
 
 # ── Mode runners ───────────────────────────────────────────────────────────────

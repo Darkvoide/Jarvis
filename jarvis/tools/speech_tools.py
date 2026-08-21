@@ -3,21 +3,51 @@
 from __future__ import annotations
 
 import asyncio
+import atexit
 import ctypes
 import logging
 import os
 import re
+import sys
 import tempfile
 import threading
 import time
 
 from jarvis.config import get_config
 
+# Ensure Windows stdout/stderr handles Unicode characters cleanly
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 logger = logging.getLogger(__name__)
 
-# Module-level pyttsx3 engine
+# Module-level pyttsx3 engine and state
 _pyttsx3_engine = None
 _engine_lock = threading.Lock()
+
+# Global state to inform input listeners (e.g. microphone) that Jarvis is currently speaking
+_is_speaking_event = threading.Event()
+
+# Shutdown guard — set to True when the interpreter is shutting down
+_shutting_down = False
+
+
+def _mark_shutdown():
+    global _shutting_down
+    _shutting_down = True
+    _is_speaking_event.clear()
+
+
+atexit.register(_mark_shutdown)
+
+
+def is_tts_playing() -> bool:
+    """Check if JARVIS is currently speaking audio aloud."""
+    return _is_speaking_event.is_set()
 
 
 def _is_tamil(text: str) -> bool:
@@ -26,16 +56,53 @@ def _is_tamil(text: str) -> bool:
 
 
 def _clean_for_speech(text: str) -> str:
-    """Strip markdown symbols and format text for natural pronunciation."""
+    """Strip markdown symbols, URLs, and format text for natural pronunciation."""
     # Remove markdown code blocks and urls
     text = re.sub(r"```[\s\S]*?```", "", text)
     text = re.sub(r"`.*?`", "", text)
     text = re.sub(r"https?://\S+", "", text)
-    # Remove bold, italics, headers, bullets
-    text = re.sub(r"[*#_~>\[\]]", " ", text)
+    # Remove markdown formatting characters
+    text = re.sub(r"[*#_~>\[\]\(\)\{\}\\]", " ", text)
     # Collapse whitespace
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def _run_coroutine_threadsafe(coro):
+    """Execute an asyncio coroutine in its own event loop on a non-daemon thread.
+
+    Using a non-daemon thread avoids RuntimeError from concurrent.futures thread pool
+    shutdown during Python interpreter exit.
+    """
+    if _shutting_down:
+        raise RuntimeError("Interpreter is shutting down — skipping TTS.")
+
+    result_box: list = [None]
+    exception_box: list = [None]
+
+    def _target():
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        try:
+            result_box[0] = loop.run_until_complete(coro)
+        except Exception as exc:
+            exception_box[0] = exc
+        finally:
+            try:
+                loop.close()
+            except Exception:
+                pass
+
+    # Non-daemon so Python shutdown waits for it to complete cleanly
+    t = threading.Thread(target=_target, daemon=False, name="jarvis-tts-edge")
+    t.start()
+    t.join(timeout=25.0)
+
+    if t.is_alive():
+        raise TimeoutError("TTS generation timed out after 25 seconds.")
+    if exception_box[0] is not None:
+        raise exception_box[0]
+    return result_box[0]
 
 
 def _play_audio_file(file_path: str) -> bool:
@@ -92,7 +159,7 @@ def _speak_edge_tts(text: str) -> bool:
         tmp_path = tmp.name
 
     try:
-        asyncio.run(_generate_edge_tts(text, voice, tmp_path))
+        _run_coroutine_threadsafe(_generate_edge_tts(text, voice, tmp_path))
         if os.path.exists(tmp_path) and os.path.getsize(tmp_path) > 0:
             _play_audio_file(tmp_path)
             return True
@@ -114,6 +181,9 @@ def speak(text: str) -> dict:
     Returns:
         A dict with status and the spoken text.
     """
+    if _shutting_down:
+        return {"error": "Interpreter shutting down — skipped."}
+
     if not text or not text.strip():
         return {"error": "No text provided to speak."}
 
@@ -124,19 +194,27 @@ def speak(text: str) -> dict:
     logger.info("speak: %s", spoken_text[:80])
     cfg = get_config().tts
 
-    # Prefer edge-tts for high-quality audio
-    if cfg.backend == "edge-tts":
-        try:
-            success = _speak_edge_tts(spoken_text)
-            if success:
-                return {"status": "ok", "spoken": spoken_text}
-        except Exception as exc:
-            logger.warning("edge-tts failed (%s), falling back to pyttsx3", exc)
-
-    # Fallback to offline pyttsx3
+    # Mark that JARVIS is currently speaking (so microphone listener avoids self-triggering)
+    _is_speaking_event.set()
     try:
-        _speak_pyttsx3(spoken_text)
-        return {"status": "ok", "spoken": spoken_text}
-    except Exception as exc:
-        logger.error("TTS error: %s", exc)
-        return {"error": f"TTS failed: {exc}", "spoken": spoken_text}
+        # Prefer edge-tts for high-quality natural audio
+        if cfg.backend == "edge-tts":
+            try:
+                success = _speak_edge_tts(spoken_text)
+                if success:
+                    return {"status": "ok", "spoken": spoken_text}
+            except Exception as exc:
+                logger.warning("edge-tts failed (%s), falling back to pyttsx3", exc)
+
+        # Fallback to offline pyttsx3
+        try:
+            _speak_pyttsx3(spoken_text)
+            return {"status": "ok", "spoken": spoken_text}
+        except Exception as exc:
+            logger.error("TTS error: %s", exc)
+            return {"error": f"TTS failed: {exc}", "spoken": spoken_text}
+    finally:
+        # Small grace period before unmuting mic (clears room echo)
+        time.sleep(0.2)
+        _is_speaking_event.clear()
+

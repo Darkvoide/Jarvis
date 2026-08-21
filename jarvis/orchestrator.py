@@ -78,6 +78,7 @@ class Orchestrator:
         Returns:
             The plain-text response from JARVIS.
         """
+        self._spoke_this_turn = False  # reset per-turn speech tracker
         self.context.add_message("user", user_input)
         logger.debug("User → %s", user_input)
 
@@ -102,7 +103,11 @@ class Orchestrator:
                     model=self.ollama_cfg.model,
                     messages=messages,
                     tools=self.tools,
-                    options={"num_predict": 1024},
+                    options={
+                        "num_predict": 180,
+                        "temperature": 0.7,
+                        "top_p": 0.9,
+                    },
                 )
             except Exception as exc:
                 logger.error("Ollama error: %s", exc)
@@ -125,6 +130,10 @@ class Orchestrator:
 
                 result = self._execute_tool(fn_name, fn_args)
 
+                # Track if the LLM explicitly called speak() so main.py won't double-speak
+                if fn_name == "speak":
+                    self._spoke_this_turn = True
+
                 self.context.append_raw(
                     {
                         "role": "tool",
@@ -135,6 +144,7 @@ class Orchestrator:
         # Exceeded max rounds — give up gracefully
         logger.warning("Max tool rounds (%d) exceeded.", self.MAX_TOOL_ROUNDS)
         return "I wasn't able to complete that in a reasonable number of steps. Please try rephrasing."
+
 
     def _execute_tool(self, name: str, args: dict[str, Any]) -> Any:
         """Look up and call a tool by name.
